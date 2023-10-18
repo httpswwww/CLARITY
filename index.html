@@ -1,26 +1,818 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" media="only screen and (max-width: 640px)">
-<meta name="robots" content="index, follow">
-<script type="text/javascript">
-    (function(c,l,a,r,i,t,y){
-        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-    })(window, document, "clarity", "script", "fa7uoro16l");
+<head><meta charset="UTF-8"><script>if(navigator.userAgent.match(/MSIE|Internet Explorer/i)||navigator.userAgent.match(/Trident\/7\..*?rv:11/i)){var href=document.location.href;if(!href.match(/[?&]nowprocket/)){if(href.indexOf("?")==-1){if(href.indexOf("#")==-1){document.location.href=href+"?nowprocket=1"}else{document.location.href=href.replace("#","?nowprocket=1#")}}else{if(href.indexOf("#")==-1){document.location.href=href+"&nowprocket=1"}else{document.location.href=href.replace("#","&nowprocket=1#")}}}}</script><script>class RocketLazyLoadScripts{constructor(e){this.triggerEvents=e,this.eventOptions={passive:!0},this.userEventListener=this.triggerListener.bind(this),this.delayedScripts={normal:[],async:[],defer:[]},this.allJQueries=[]}_addUserInteractionListener(e){this.triggerEvents.forEach((t=>window.addEventListener(t,e.userEventListener,e.eventOptions)))}_removeUserInteractionListener(e){this.triggerEvents.forEach((t=>window.removeEventListener(t,e.userEventListener,e.eventOptions)))}triggerListener(){this._removeUserInteractionListener(this),"loading"===document.readyState?document.addEventListener("DOMContentLoaded",this._loadEverythingNow.bind(this)):this._loadEverythingNow()}async _loadEverythingNow(){this._delayEventListeners(),this._delayJQueryReady(this),this._handleDocumentWrite(),this._registerAllDelayedScripts(),this._preloadAllScripts(),await this._loadScriptsFromList(this.delayedScripts.normal),await this._loadScriptsFromList(this.delayedScripts.defer),await this._loadScriptsFromList(this.delayedScripts.async),await this._triggerDOMContentLoaded(),await this._triggerWindowLoad(),window.dispatchEvent(new Event("rocket-allScriptsLoaded"))}_registerAllDelayedScripts(){document.querySelectorAll("script[type=rocketlazyloadscript]").forEach((e=>{e.hasAttribute("src")?e.hasAttribute("async")&&!1!==e.async?this.delayedScripts.async.push(e):e.hasAttribute("defer")&&!1!==e.defer||"module"===e.getAttribute("data-rocket-type")?this.delayedScripts.defer.push(e):this.delayedScripts.normal.push(e):this.delayedScripts.normal.push(e)}))}async _transformScript(e){return await this._requestAnimFrame(),new Promise((t=>{const n=document.createElement("script");let r;[...e.attributes].forEach((e=>{let t=e.nodeName;"type"!==t&&("data-rocket-type"===t&&(t="type",r=e.nodeValue),n.setAttribute(t,e.nodeValue))})),e.hasAttribute("src")?(n.addEventListener("load",t),n.addEventListener("error",t)):(n.text=e.text,t()),e.parentNode.replaceChild(n,e)}))}async _loadScriptsFromList(e){const t=e.shift();return t?(await this._transformScript(t),this._loadScriptsFromList(e)):Promise.resolve()}_preloadAllScripts(){var e=document.createDocumentFragment();[...this.delayedScripts.normal,...this.delayedScripts.defer,...this.delayedScripts.async].forEach((t=>{const n=t.getAttribute("src");if(n){const t=document.createElement("link");t.href=n,t.rel="preload",t.as="script",e.appendChild(t)}})),document.head.appendChild(e)}_delayEventListeners(){let e={};function t(t,n){!function(t){function n(n){return e[t].eventsToRewrite.indexOf(n)>=0?"rocket-"+n:n}e[t]||(e[t]={originalFunctions:{add:t.addEventListener,remove:t.removeEventListener},eventsToRewrite:[]},t.addEventListener=function(){arguments[0]=n(arguments[0]),e[t].originalFunctions.add.apply(t,arguments)},t.removeEventListener=function(){arguments[0]=n(arguments[0]),e[t].originalFunctions.remove.apply(t,arguments)})}(t),e[t].eventsToRewrite.push(n)}function n(e,t){let n=e[t];Object.defineProperty(e,t,{get:()=>n||function(){},set(r){e["rocket"+t]=n=r}})}t(document,"DOMContentLoaded"),t(window,"DOMContentLoaded"),t(window,"load"),t(window,"pageshow"),t(document,"readystatechange"),n(document,"onreadystatechange"),n(window,"onload"),n(window,"onpageshow")}_delayJQueryReady(e){let t=window.jQuery;Object.defineProperty(window,"jQuery",{get:()=>t,set(n){if(n&&n.fn&&!e.allJQueries.includes(n)){n.fn.ready=n.fn.init.prototype.ready=function(t){e.domReadyFired?t.bind(document)(n):document.addEventListener("rocket-DOMContentLoaded",(()=>t.bind(document)(n)))};const t=n.fn.on;n.fn.on=n.fn.init.prototype.on=function(){if(this[0]===window){function e(e){return e.split(" ").map((e=>"load"===e||0===e.indexOf("load.")?"rocket-jquery-load":e)).join(" ")}"string"==typeof arguments[0]||arguments[0]instanceof String?arguments[0]=e(arguments[0]):"object"==typeof arguments[0]&&Object.keys(arguments[0]).forEach((t=>{delete Object.assign(arguments[0],{[e(t)]:arguments[0][t]})[t]}))}return t.apply(this,arguments),this},e.allJQueries.push(n)}t=n}})}async _triggerDOMContentLoaded(){this.domReadyFired=!0,await this._requestAnimFrame(),document.dispatchEvent(new Event("rocket-DOMContentLoaded")),await this._requestAnimFrame(),window.dispatchEvent(new Event("rocket-DOMContentLoaded")),await this._requestAnimFrame(),document.dispatchEvent(new Event("rocket-readystatechange")),await this._requestAnimFrame(),document.rocketonreadystatechange&&document.rocketonreadystatechange()}async _triggerWindowLoad(){await this._requestAnimFrame(),window.dispatchEvent(new Event("rocket-load")),await this._requestAnimFrame(),window.rocketonload&&window.rocketonload(),await this._requestAnimFrame(),this.allJQueries.forEach((e=>e(window).trigger("rocket-jquery-load"))),window.dispatchEvent(new Event("rocket-pageshow")),await this._requestAnimFrame(),window.rocketonpageshow&&window.rocketonpageshow()}_handleDocumentWrite(){const e=new Map;document.write=document.writeln=function(t){const n=document.currentScript,r=document.createRange(),i=n.parentElement;let o=e.get(n);void 0===o&&(o=n.nextSibling,e.set(n,o));const a=document.createDocumentFragment();r.setStart(a,0),a.appendChild(r.createContextualFragment(t)),i.insertBefore(a,o)}}async _requestAnimFrame(){return new Promise((e=>requestAnimationFrame(e)))}static run(){const e=new RocketLazyLoadScripts(["keydown","mousemove","touchmove","touchstart","touchend","wheel"]);e._addUserInteractionListener(e)}}RocketLazyLoadScripts.run();</script>
+<title>Mentoria Next Level Resultados &#8211; Nicoli Heinig</title><link rel="preload" as="style" href="https://fonts.googleapis.com/css?family=Montserrat%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic&#038;display=swap" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic&#038;display=swap" media="print" onload="this.media='all'" /><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic&#038;display=swap" /></noscript><link rel="stylesheet" href="https://nicoliheinig.com.br/wp-content/cache/min/1/7372a349dd0e4f7812647e20fe82f30d.css" media="all" data-minify="1" />
+<meta name="robots" content="max-image-preview:large" />
+<link href="https://fonts.gstatic.com" crossorigin rel="preconnect" />
+<link rel="alternate" type="application/rss+xml" title="Feed para Nicoli Heinig &raquo;" href="https://nicoliheinig.com.br/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Feed de comentários para Nicoli Heinig &raquo;" href="https://nicoliheinig.com.br/comments/feed/" />
+
+
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '879072833326159');
+fbq('init', '784062659508553');
+fbq('track', 'PageView');
 </script>
 
 <noscript>
-
 <img height="1" width="1" style="display:none"
-src=""/>
-
+src="https://www.facebook.com/tr?id=879072833326159&ev=PageView&noscript=1"/>
+<img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=PIXEL&ev=784062659508553&noscript=1"/>
 </noscript>
+<!-- End Meta Pixel Code -->
+
+
+<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 0.07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<style id="classic-theme-styles-inline-css" type="text/css">
+/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
+</style>
+<style id="global-styles-inline-css" type="text/css">
+body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1);--wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);}:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flow > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}body .is-layout-flow > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}body .is-layout-flow > .aligncenter{margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}body .is-layout-constrained > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}body .is-layout-constrained > .aligncenter{margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > :where(:not(.alignleft):not(.alignright):not(.alignfull)){max-width: var(--wp--style--global--content-size);margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > .alignwide{max-width: var(--wp--style--global--wide-size);}body .is-layout-flex{display: flex;}body .is-layout-flex{flex-wrap: wrap;align-items: center;}body .is-layout-flex > *{margin: 0;}body .is-layout-grid{display: grid;}body .is-layout-grid > *{margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+.wp-block-navigation a:where(:not(.wp-element-button)){color: inherit;}
+:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}
+:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}
+.wp-block-pullquote{font-size: 1.5em;line-height: 1.6;}
+</style>
+<style id="elementor-frontend-inline-css" type="text/css">
+@-webkit-keyframes ha_fadeIn{0%{opacity:0}to{opacity:1}}@keyframes ha_fadeIn{0%{opacity:0}to{opacity:1}}@-webkit-keyframes ha_zoomIn{0%{opacity:0;-webkit-transform:scale3d(.3,.3,.3);transform:scale3d(.3,.3,.3)}50%{opacity:1}}@keyframes ha_zoomIn{0%{opacity:0;-webkit-transform:scale3d(.3,.3,.3);transform:scale3d(.3,.3,.3)}50%{opacity:1}}@-webkit-keyframes ha_rollIn{0%{opacity:0;-webkit-transform:translate3d(-100%,0,0) rotate3d(0,0,1,-120deg);transform:translate3d(-100%,0,0) rotate3d(0,0,1,-120deg)}to{opacity:1}}@keyframes ha_rollIn{0%{opacity:0;-webkit-transform:translate3d(-100%,0,0) rotate3d(0,0,1,-120deg);transform:translate3d(-100%,0,0) rotate3d(0,0,1,-120deg)}to{opacity:1}}@-webkit-keyframes ha_bounce{0%,20%,53%,to{-webkit-animation-timing-function:cubic-bezier(.215,.61,.355,1);animation-timing-function:cubic-bezier(.215,.61,.355,1)}40%,43%{-webkit-transform:translate3d(0,-30px,0) scaleY(1.1);transform:translate3d(0,-30px,0) scaleY(1.1);-webkit-animation-timing-function:cubic-bezier(.755,.05,.855,.06);animation-timing-function:cubic-bezier(.755,.05,.855,.06)}70%{-webkit-transform:translate3d(0,-15px,0) scaleY(1.05);transform:translate3d(0,-15px,0) scaleY(1.05);-webkit-animation-timing-function:cubic-bezier(.755,.05,.855,.06);animation-timing-function:cubic-bezier(.755,.05,.855,.06)}80%{-webkit-transition-timing-function:cubic-bezier(.215,.61,.355,1);transition-timing-function:cubic-bezier(.215,.61,.355,1);-webkit-transform:translate3d(0,0,0) scaleY(.95);transform:translate3d(0,0,0) scaleY(.95)}90%{-webkit-transform:translate3d(0,-4px,0) scaleY(1.02);transform:translate3d(0,-4px,0) scaleY(1.02)}}@keyframes ha_bounce{0%,20%,53%,to{-webkit-animation-timing-function:cubic-bezier(.215,.61,.355,1);animation-timing-function:cubic-bezier(.215,.61,.355,1)}40%,43%{-webkit-transform:translate3d(0,-30px,0) scaleY(1.1);transform:translate3d(0,-30px,0) scaleY(1.1);-webkit-animation-timing-function:cubic-bezier(.755,.05,.855,.06);animation-timing-function:cubic-bezier(.755,.05,.855,.06)}70%{-webkit-transform:translate3d(0,-15px,0) scaleY(1.05);transform:translate3d(0,-15px,0) scaleY(1.05);-webkit-animation-timing-function:cubic-bezier(.755,.05,.855,.06);animation-timing-function:cubic-bezier(.755,.05,.855,.06)}80%{-webkit-transition-timing-function:cubic-bezier(.215,.61,.355,1);transition-timing-function:cubic-bezier(.215,.61,.355,1);-webkit-transform:translate3d(0,0,0) scaleY(.95);transform:translate3d(0,0,0) scaleY(.95)}90%{-webkit-transform:translate3d(0,-4px,0) scaleY(1.02);transform:translate3d(0,-4px,0) scaleY(1.02)}}@-webkit-keyframes ha_bounceIn{0%,20%,40%,60%,80%,to{-webkit-animation-timing-function:cubic-bezier(.215,.61,.355,1);animation-timing-function:cubic-bezier(.215,.61,.355,1)}0%{opacity:0;-webkit-transform:scale3d(.3,.3,.3);transform:scale3d(.3,.3,.3)}20%{-webkit-transform:scale3d(1.1,1.1,1.1);transform:scale3d(1.1,1.1,1.1)}40%{-webkit-transform:scale3d(.9,.9,.9);transform:scale3d(.9,.9,.9)}60%{opacity:1;-webkit-transform:scale3d(1.03,1.03,1.03);transform:scale3d(1.03,1.03,1.03)}80%{-webkit-transform:scale3d(.97,.97,.97);transform:scale3d(.97,.97,.97)}to{opacity:1}}@keyframes ha_bounceIn{0%,20%,40%,60%,80%,to{-webkit-animation-timing-function:cubic-bezier(.215,.61,.355,1);animation-timing-function:cubic-bezier(.215,.61,.355,1)}0%{opacity:0;-webkit-transform:scale3d(.3,.3,.3);transform:scale3d(.3,.3,.3)}20%{-webkit-transform:scale3d(1.1,1.1,1.1);transform:scale3d(1.1,1.1,1.1)}40%{-webkit-transform:scale3d(.9,.9,.9);transform:scale3d(.9,.9,.9)}60%{opacity:1;-webkit-transform:scale3d(1.03,1.03,1.03);transform:scale3d(1.03,1.03,1.03)}80%{-webkit-transform:scale3d(.97,.97,.97);transform:scale3d(.97,.97,.97)}to{opacity:1}}@-webkit-keyframes ha_flipInX{0%{opacity:0;-webkit-transform:perspective(400px) rotate3d(1,0,0,90deg);transform:perspective(400px) rotate3d(1,0,0,90deg);-webkit-animation-timing-function:ease-in;animation-timing-function:ease-in}40%{-webkit-transform:perspective(400px) rotate3d(1,0,0,-20deg);transform:perspective(400px) rotate3d(1,0,0,-20deg);-webkit-animation-timing-function:ease-in;animation-timing-function:ease-in}60%{opacity:1;-webkit-transform:perspective(400px) rotate3d(1,0,0,10deg);transform:perspective(400px) rotate3d(1,0,0,10deg)}80%{-webkit-transform:perspective(400px) rotate3d(1,0,0,-5deg);transform:perspective(400px) rotate3d(1,0,0,-5deg)}}@keyframes ha_flipInX{0%{opacity:0;-webkit-transform:perspective(400px) rotate3d(1,0,0,90deg);transform:perspective(400px) rotate3d(1,0,0,90deg);-webkit-animation-timing-function:ease-in;animation-timing-function:ease-in}40%{-webkit-transform:perspective(400px) rotate3d(1,0,0,-20deg);transform:perspective(400px) rotate3d(1,0,0,-20deg);-webkit-animation-timing-function:ease-in;animation-timing-function:ease-in}60%{opacity:1;-webkit-transform:perspective(400px) rotate3d(1,0,0,10deg);transform:perspective(400px) rotate3d(1,0,0,10deg)}80%{-webkit-transform:perspective(400px) rotate3d(1,0,0,-5deg);transform:perspective(400px) rotate3d(1,0,0,-5deg)}}@-webkit-keyframes ha_flipInY{0%{opacity:0;-webkit-transform:perspective(400px) rotate3d(0,1,0,90deg);transform:perspective(400px) rotate3d(0,1,0,90deg);-webkit-animation-timing-function:ease-in;animation-timing-function:ease-in}40%{-webkit-transform:perspective(400px) rotate3d(0,1,0,-20deg);transform:perspective(400px) rotate3d(0,1,0,-20deg);-webkit-animation-timing-function:ease-in;animation-timing-function:ease-in}60%{opacity:1;-webkit-transform:perspective(400px) rotate3d(0,1,0,10deg);transform:perspective(400px) rotate3d(0,1,0,10deg)}80%{-webkit-transform:perspective(400px) rotate3d(0,1,0,-5deg);transform:perspective(400px) rotate3d(0,1,0,-5deg)}}@keyframes ha_flipInY{0%{opacity:0;-webkit-transform:perspective(400px) rotate3d(0,1,0,90deg);transform:perspective(400px) rotate3d(0,1,0,90deg);-webkit-animation-timing-function:ease-in;animation-timing-function:ease-in}40%{-webkit-transform:perspective(400px) rotate3d(0,1,0,-20deg);transform:perspective(400px) rotate3d(0,1,0,-20deg);-webkit-animation-timing-function:ease-in;animation-timing-function:ease-in}60%{opacity:1;-webkit-transform:perspective(400px) rotate3d(0,1,0,10deg);transform:perspective(400px) rotate3d(0,1,0,10deg)}80%{-webkit-transform:perspective(400px) rotate3d(0,1,0,-5deg);transform:perspective(400px) rotate3d(0,1,0,-5deg)}}@-webkit-keyframes ha_swing{20%{-webkit-transform:rotate3d(0,0,1,15deg);transform:rotate3d(0,0,1,15deg)}40%{-webkit-transform:rotate3d(0,0,1,-10deg);transform:rotate3d(0,0,1,-10deg)}60%{-webkit-transform:rotate3d(0,0,1,5deg);transform:rotate3d(0,0,1,5deg)}80%{-webkit-transform:rotate3d(0,0,1,-5deg);transform:rotate3d(0,0,1,-5deg)}}@keyframes ha_swing{20%{-webkit-transform:rotate3d(0,0,1,15deg);transform:rotate3d(0,0,1,15deg)}40%{-webkit-transform:rotate3d(0,0,1,-10deg);transform:rotate3d(0,0,1,-10deg)}60%{-webkit-transform:rotate3d(0,0,1,5deg);transform:rotate3d(0,0,1,5deg)}80%{-webkit-transform:rotate3d(0,0,1,-5deg);transform:rotate3d(0,0,1,-5deg)}}@-webkit-keyframes ha_slideInDown{0%{visibility:visible;-webkit-transform:translate3d(0,-100%,0);transform:translate3d(0,-100%,0)}}@keyframes ha_slideInDown{0%{visibility:visible;-webkit-transform:translate3d(0,-100%,0);transform:translate3d(0,-100%,0)}}@-webkit-keyframes ha_slideInUp{0%{visibility:visible;-webkit-transform:translate3d(0,100%,0);transform:translate3d(0,100%,0)}}@keyframes ha_slideInUp{0%{visibility:visible;-webkit-transform:translate3d(0,100%,0);transform:translate3d(0,100%,0)}}@-webkit-keyframes ha_slideInLeft{0%{visibility:visible;-webkit-transform:translate3d(-100%,0,0);transform:translate3d(-100%,0,0)}}@keyframes ha_slideInLeft{0%{visibility:visible;-webkit-transform:translate3d(-100%,0,0);transform:translate3d(-100%,0,0)}}@-webkit-keyframes ha_slideInRight{0%{visibility:visible;-webkit-transform:translate3d(100%,0,0);transform:translate3d(100%,0,0)}}@keyframes ha_slideInRight{0%{visibility:visible;-webkit-transform:translate3d(100%,0,0);transform:translate3d(100%,0,0)}}.ha_fadeIn{-webkit-animation-name:ha_fadeIn;animation-name:ha_fadeIn}.ha_zoomIn{-webkit-animation-name:ha_zoomIn;animation-name:ha_zoomIn}.ha_rollIn{-webkit-animation-name:ha_rollIn;animation-name:ha_rollIn}.ha_bounce{-webkit-transform-origin:center bottom;-ms-transform-origin:center bottom;transform-origin:center bottom;-webkit-animation-name:ha_bounce;animation-name:ha_bounce}.ha_bounceIn{-webkit-animation-name:ha_bounceIn;animation-name:ha_bounceIn;-webkit-animation-duration:.75s;-webkit-animation-duration:calc(var(--animate-duration)*.75);animation-duration:.75s;animation-duration:calc(var(--animate-duration)*.75)}.ha_flipInX,.ha_flipInY{-webkit-animation-name:ha_flipInX;animation-name:ha_flipInX;-webkit-backface-visibility:visible!important;backface-visibility:visible!important}.ha_flipInY{-webkit-animation-name:ha_flipInY;animation-name:ha_flipInY}.ha_swing{-webkit-transform-origin:top center;-ms-transform-origin:top center;transform-origin:top center;-webkit-animation-name:ha_swing;animation-name:ha_swing}.ha_slideInDown{-webkit-animation-name:ha_slideInDown;animation-name:ha_slideInDown}.ha_slideInUp{-webkit-animation-name:ha_slideInUp;animation-name:ha_slideInUp}.ha_slideInLeft{-webkit-animation-name:ha_slideInLeft;animation-name:ha_slideInLeft}.ha_slideInRight{-webkit-animation-name:ha_slideInRight;animation-name:ha_slideInRight}.ha-css-transform-yes{-webkit-transition-duration:var(--ha-tfx-transition-duration, .2s);transition-duration:var(--ha-tfx-transition-duration, .2s);-webkit-transition-property:-webkit-transform;transition-property:transform;transition-property:transform,-webkit-transform;-webkit-transform:translate(var(--ha-tfx-translate-x, 0),var(--ha-tfx-translate-y, 0)) scale(var(--ha-tfx-scale-x, 1),var(--ha-tfx-scale-y, 1)) skew(var(--ha-tfx-skew-x, 0),var(--ha-tfx-skew-y, 0)) rotateX(var(--ha-tfx-rotate-x, 0)) rotateY(var(--ha-tfx-rotate-y, 0)) rotateZ(var(--ha-tfx-rotate-z, 0));transform:translate(var(--ha-tfx-translate-x, 0),var(--ha-tfx-translate-y, 0)) scale(var(--ha-tfx-scale-x, 1),var(--ha-tfx-scale-y, 1)) skew(var(--ha-tfx-skew-x, 0),var(--ha-tfx-skew-y, 0)) rotateX(var(--ha-tfx-rotate-x, 0)) rotateY(var(--ha-tfx-rotate-y, 0)) rotateZ(var(--ha-tfx-rotate-z, 0))}.ha-css-transform-yes:hover{-webkit-transform:translate(var(--ha-tfx-translate-x-hover, var(--ha-tfx-translate-x, 0)),var(--ha-tfx-translate-y-hover, var(--ha-tfx-translate-y, 0))) scale(var(--ha-tfx-scale-x-hover, var(--ha-tfx-scale-x, 1)),var(--ha-tfx-scale-y-hover, var(--ha-tfx-scale-y, 1))) skew(var(--ha-tfx-skew-x-hover, var(--ha-tfx-skew-x, 0)),var(--ha-tfx-skew-y-hover, var(--ha-tfx-skew-y, 0))) rotateX(var(--ha-tfx-rotate-x-hover, var(--ha-tfx-rotate-x, 0))) rotateY(var(--ha-tfx-rotate-y-hover, var(--ha-tfx-rotate-y, 0))) rotateZ(var(--ha-tfx-rotate-z-hover, var(--ha-tfx-rotate-z, 0)));transform:translate(var(--ha-tfx-translate-x-hover, var(--ha-tfx-translate-x, 0)),var(--ha-tfx-translate-y-hover, var(--ha-tfx-translate-y, 0))) scale(var(--ha-tfx-scale-x-hover, var(--ha-tfx-scale-x, 1)),var(--ha-tfx-scale-y-hover, var(--ha-tfx-scale-y, 1))) skew(var(--ha-tfx-skew-x-hover, var(--ha-tfx-skew-x, 0)),var(--ha-tfx-skew-y-hover, var(--ha-tfx-skew-y, 0))) rotateX(var(--ha-tfx-rotate-x-hover, var(--ha-tfx-rotate-x, 0))) rotateY(var(--ha-tfx-rotate-y-hover, var(--ha-tfx-rotate-y, 0))) rotateZ(var(--ha-tfx-rotate-z-hover, var(--ha-tfx-rotate-z, 0)))}.happy-addon>.elementor-widget-container{word-wrap:break-word;overflow-wrap:break-word}.happy-addon>.elementor-widget-container,.happy-addon>.elementor-widget-container *{-webkit-box-sizing:border-box;box-sizing:border-box}.happy-addon p:empty{display:none}.happy-addon .elementor-inline-editing{min-height:auto!important}.happy-addon-pro img{max-width:100%;height:auto;-o-object-fit:cover;object-fit:cover}.ha-screen-reader-text{position:absolute;overflow:hidden;clip:rect(1px,1px,1px,1px);margin:-1px;padding:0;width:1px;height:1px;border:0;word-wrap:normal!important;-webkit-clip-path:inset(50%);clip-path:inset(50%)}.ha-has-bg-overlay>.elementor-widget-container{position:relative;z-index:1}.ha-has-bg-overlay>.elementor-widget-container:before{position:absolute;top:0;left:0;z-index:-1;width:100%;height:100%;content:""}.ha-popup--is-enabled .ha-js-popup,.ha-popup--is-enabled .ha-js-popup img{cursor:-webkit-zoom-in!important;cursor:zoom-in!important}.mfp-wrap .mfp-arrow,.mfp-wrap .mfp-close{background-color:transparent}.mfp-wrap .mfp-arrow:focus,.mfp-wrap .mfp-close:focus{outline-width:thin}.ha-advanced-tooltip-enable{position:relative;cursor:pointer;--ha-tooltip-arrow-color:black;--ha-tooltip-arrow-distance:0}.ha-advanced-tooltip-enable .ha-advanced-tooltip-content{position:absolute;z-index:999;display:none;padding:5px 0;width:120px;height:auto;border-radius:6px;background-color:#000;color:#fff;text-align:center;opacity:0}.ha-advanced-tooltip-enable .ha-advanced-tooltip-content::after{position:absolute;border-width:5px;border-style:solid;content:""}.ha-advanced-tooltip-enable .ha-advanced-tooltip-content.no-arrow::after{visibility:hidden}.ha-advanced-tooltip-enable .ha-advanced-tooltip-content.show{display:inline-block;opacity:1}.ha-advanced-tooltip-enable.ha-advanced-tooltip-top .ha-advanced-tooltip-content,body[data-elementor-device-mode=tablet] .ha-advanced-tooltip-enable.ha-advanced-tooltip-tablet-top .ha-advanced-tooltip-content{top:unset;right:0;bottom:calc(101% + var(--ha-tooltip-arrow-distance));left:0;margin:0 auto}.ha-advanced-tooltip-enable.ha-advanced-tooltip-top .ha-advanced-tooltip-content::after,body[data-elementor-device-mode=tablet] .ha-advanced-tooltip-enable.ha-advanced-tooltip-tablet-top .ha-advanced-tooltip-content::after{top:100%;right:unset;bottom:unset;left:50%;border-color:var(--ha-tooltip-arrow-color) transparent transparent transparent;-webkit-transform:translateX(-50%);-ms-transform:translateX(-50%);transform:translateX(-50%)}.ha-advanced-tooltip-enable.ha-advanced-tooltip-bottom .ha-advanced-tooltip-content,body[data-elementor-device-mode=tablet] .ha-advanced-tooltip-enable.ha-advanced-tooltip-tablet-bottom .ha-advanced-tooltip-content{top:calc(101% + var(--ha-tooltip-arrow-distance));right:0;bottom:unset;left:0;margin:0 auto}.ha-advanced-tooltip-enable.ha-advanced-tooltip-bottom .ha-advanced-tooltip-content::after,body[data-elementor-device-mode=tablet] .ha-advanced-tooltip-enable.ha-advanced-tooltip-tablet-bottom .ha-advanced-tooltip-content::after{top:unset;right:unset;bottom:100%;left:50%;border-color:transparent transparent var(--ha-tooltip-arrow-color) transparent;-webkit-transform:translateX(-50%);-ms-transform:translateX(-50%);transform:translateX(-50%)}.ha-advanced-tooltip-enable.ha-advanced-tooltip-left .ha-advanced-tooltip-content,body[data-elementor-device-mode=tablet] .ha-advanced-tooltip-enable.ha-advanced-tooltip-tablet-left .ha-advanced-tooltip-content{top:50%;right:calc(101% + var(--ha-tooltip-arrow-distance));bottom:unset;left:unset;-webkit-transform:translateY(-50%);-ms-transform:translateY(-50%);transform:translateY(-50%)}.ha-advanced-tooltip-enable.ha-advanced-tooltip-left .ha-advanced-tooltip-content::after,body[data-elementor-device-mode=tablet] .ha-advanced-tooltip-enable.ha-advanced-tooltip-tablet-left .ha-advanced-tooltip-content::after{top:50%;right:unset;bottom:unset;left:100%;border-color:transparent transparent transparent var(--ha-tooltip-arrow-color);-webkit-transform:translateY(-50%);-ms-transform:translateY(-50%);transform:translateY(-50%)}.ha-advanced-tooltip-enable.ha-advanced-tooltip-right .ha-advanced-tooltip-content,body[data-elementor-device-mode=tablet] .ha-advanced-tooltip-enable.ha-advanced-tooltip-tablet-right .ha-advanced-tooltip-content{top:50%;right:unset;bottom:unset;left:calc(101% + var(--ha-tooltip-arrow-distance));-webkit-transform:translateY(-50%);-ms-transform:translateY(-50%);transform:translateY(-50%)}.ha-advanced-tooltip-enable.ha-advanced-tooltip-right .ha-advanced-tooltip-content::after,body[data-elementor-device-mode=tablet] .ha-advanced-tooltip-enable.ha-advanced-tooltip-tablet-right .ha-advanced-tooltip-content::after{top:50%;right:100%;bottom:unset;left:unset;border-color:transparent var(--ha-tooltip-arrow-color) transparent transparent;-webkit-transform:translateY(-50%);-ms-transform:translateY(-50%);transform:translateY(-50%)}body[data-elementor-device-mode=mobile] .ha-advanced-tooltip-enable.ha-advanced-tooltip-mobile-top .ha-advanced-tooltip-content{top:unset;right:0;bottom:calc(101% + var(--ha-tooltip-arrow-distance));left:0;margin:0 auto}body[data-elementor-device-mode=mobile] .ha-advanced-tooltip-enable.ha-advanced-tooltip-mobile-top .ha-advanced-tooltip-content::after{top:100%;right:unset;bottom:unset;left:50%;border-color:var(--ha-tooltip-arrow-color) transparent transparent transparent;-webkit-transform:translateX(-50%);-ms-transform:translateX(-50%);transform:translateX(-50%)}body[data-elementor-device-mode=mobile] .ha-advanced-tooltip-enable.ha-advanced-tooltip-mobile-bottom .ha-advanced-tooltip-content{top:calc(101% + var(--ha-tooltip-arrow-distance));right:0;bottom:unset;left:0;margin:0 auto}body[data-elementor-device-mode=mobile] .ha-advanced-tooltip-enable.ha-advanced-tooltip-mobile-bottom .ha-advanced-tooltip-content::after{top:unset;right:unset;bottom:100%;left:50%;border-color:transparent transparent var(--ha-tooltip-arrow-color) transparent;-webkit-transform:translateX(-50%);-ms-transform:translateX(-50%);transform:translateX(-50%)}body[data-elementor-device-mode=mobile] .ha-advanced-tooltip-enable.ha-advanced-tooltip-mobile-left .ha-advanced-tooltip-content{top:50%;right:calc(101% + var(--ha-tooltip-arrow-distance));bottom:unset;left:unset;-webkit-transform:translateY(-50%);-ms-transform:translateY(-50%);transform:translateY(-50%)}body[data-elementor-device-mode=mobile] .ha-advanced-tooltip-enable.ha-advanced-tooltip-mobile-left .ha-advanced-tooltip-content::after{top:50%;right:unset;bottom:unset;left:100%;border-color:transparent transparent transparent var(--ha-tooltip-arrow-color);-webkit-transform:translateY(-50%);-ms-transform:translateY(-50%);transform:translateY(-50%)}body[data-elementor-device-mode=mobile] .ha-advanced-tooltip-enable.ha-advanced-tooltip-mobile-right .ha-advanced-tooltip-content{top:50%;right:unset;bottom:unset;left:calc(101% + var(--ha-tooltip-arrow-distance));-webkit-transform:translateY(-50%);-ms-transform:translateY(-50%);transform:translateY(-50%)}body[data-elementor-device-mode=mobile] .ha-advanced-tooltip-enable.ha-advanced-tooltip-mobile-right .ha-advanced-tooltip-content::after{top:50%;right:100%;bottom:unset;left:unset;border-color:transparent var(--ha-tooltip-arrow-color) transparent transparent;-webkit-transform:translateY(-50%);-ms-transform:translateY(-50%);transform:translateY(-50%)}body.elementor-editor-active .happy-addon.ha-gravityforms .gform_wrapper{display:block!important}.ha-scroll-to-top-wrap.ha-scroll-to-top-hide{display:none}.ha-scroll-to-top-button{position:fixed;right:15px;bottom:15px;z-index:9999;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-align:center;-webkit-align-items:center;align-items:center;-ms-flex-align:center;-webkit-box-pack:center;-ms-flex-pack:center;-webkit-justify-content:center;justify-content:center;width:50px;height:50px;border-radius:50px;background-color:#5636d1;opacity:.7;cursor:pointer;-webkit-transition:all .3s;transition:all .3s}.ha-scroll-to-top-button i{color:#fff;font-size:16px}
+</style>
+<link rel="stylesheet" id="happy-icons-css" href="https://nicoliheinig.com.br/wp-content/plugins/happy-elementor-addons/assets/fonts/style.min.css?ver=3.7.0" type="text/css" media="all" />
+<style id="rocket-lazyload-inline-css" type="text/css">
+.rll-youtube-player{position:relative;padding-bottom:56.23%;height:0;overflow:hidden;max-width:100%;}.rll-youtube-player iframe{position:absolute;top:0;left:0;width:100%;height:100%;z-index:100;background:0 0}.rll-youtube-player img{bottom:0;display:block;left:0;margin:auto;max-width:100%;width:100%;position:absolute;right:0;top:0;border:none;height:auto;cursor:pointer;-webkit-transition:.4s all;-moz-transition:.4s all;transition:.4s all}.rll-youtube-player img:hover{-webkit-filter:brightness(75%)}.rll-youtube-player .play{height:72px;width:72px;left:50%;top:50%;margin-left:-36px;margin-top:-36px;position:absolute;background:url(https://nicoliheinig.com.br/wp-content/plugins/wp-rocket/assets/img/youtube.png) no-repeat;cursor:pointer}
+</style>
+<link rel="stylesheet" id="elementor-icons-shared-0-css" href="https://nicoliheinig.com.br/wp-content/plugins/happy-elementor-addons/assets/fonts/style.min.css?ver=3.7.0" type="text/css" media="all" />
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" src="https://nicoliheinig.com.br/wp-includes/js/jquery/jquery.min.js?ver=3.7.0" id="jquery-core-js" defer></script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" src="https://nicoliheinig.com.br/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1" id="jquery-migrate-js" defer></script>
 
 
 
-</head>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" src="https://nicoliheinig.com.br/wp-content/plugins/elementor/assets/lib/font-awesome/js/v4-shims.min.js?ver=3.5.6" id="font-awesome-4-shim-js" defer></script>
+<link rel="https://api.w.org/" href="https://nicoliheinig.com.br/wp-json/" /><link rel="alternate" type="application/json" href="https://nicoliheinig.com.br/wp-json/wp/v2/pages/6149" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://nicoliheinig.com.br/xmlrpc.php?rsd" />
+<meta name="generator" content="WordPress 6.3.2" />
+<link rel="canonical" href="https://nicoliheinig.com.br/next-level-resultados/" />
+<link rel="shortlink" href="https://nicoliheinig.com.br/?p=6149" />
+<link rel="alternate" type="application/json+oembed" href="https://nicoliheinig.com.br/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fnicoliheinig.com.br%2Fnext-level-resultados%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://nicoliheinig.com.br/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fnicoliheinig.com.br%2Fnext-level-resultados%2F&#038;format=xml" />
+
+
+
+<link rel="icon" href="https://nicoliheinig.com.br/wp-content/uploads/2021/07/cropped-logo-nicoli-nh-32x32.png" sizes="32x32" />
+<link rel="icon" href="https://nicoliheinig.com.br/wp-content/uploads/2021/07/cropped-logo-nicoli-nh-192x192.png" sizes="192x192" />
+<link rel="apple-touch-icon" href="https://nicoliheinig.com.br/wp-content/uploads/2021/07/cropped-logo-nicoli-nh-180x180.png" />
+<meta name="msapplication-TileImage" content="https://nicoliheinig.com.br/wp-content/uploads/2021/07/cropped-logo-nicoli-nh-270x270.png" />
+<noscript><style id="rocket-lazyload-nojs-css">.rll-youtube-player, [data-lazy-src]{display:none !important;}</style></noscript> <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" /></head>
+<body class="page-template page-template-elementor_canvas page page-id-6149 elementor-default elementor-template-canvas elementor-kit-9 elementor-page elementor-page-6149">
+<div data-elementor-type="wp-page" data-elementor-id="6149" class="elementor elementor-6149" data-elementor-settings="[]">
+<div class="elementor-section-wrap">
+<section class="elementor-section elementor-top-section elementor-element elementor-element-953e066 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="953e066" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+<div class="elementor-container elementor-column-gap-default">
+<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-db9f5d8" data-id="db9f5d8" data-element_type="column">
+<div class="elementor-widget-wrap elementor-element-populated">
+<section class="elementor-section elementor-inner-section elementor-element elementor-element-7d5f6a8 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="7d5f6a8" data-element_type="section">
+<div class="elementor-container elementor-column-gap-default">
+<div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-9af73da" data-id="9af73da" data-element_type="column">
+<div class="elementor-widget-wrap elementor-element-populated">
+<div class="elementor-element elementor-element-e68ffcb elementor-widget elementor-widget-image" data-id="e68ffcb" data-element_type="widget" data-widget_type="image.default">
+<div class="elementor-widget-container">
+<style>/*! elementor - v3.5.6 - 28-02-2022 */
+.elementor-widget-image{text-align:center}.elementor-widget-image a{display:inline-block}.elementor-widget-image a img[src$=".svg"]{width:48px}.elementor-widget-image img{vertical-align:middle;display:inline-block}</style> <img decoding="async" width="121" height="42" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20121%2042'%3E%3C/svg%3E" class="attachment-full size-full" alt data-lazy-src="https://nicoliheinig.com.br/wp-content/uploads/2023/06/logo.webp" /><noscript><img decoding="async" width="121" height="42" src="https://nicoliheinig.com.br/wp-content/uploads/2023/06/logo.webp" class="attachment-full size-full" alt="" /></noscript> </div>
+</div>
+<div class="elementor-element elementor-element-b43124c elementor-widget elementor-widget-heading" data-id="b43124c" data-element_type="widget" data-widget_type="heading.default">
+<div class="elementor-widget-container">
+<style>/*! elementor - v3.5.6 - 28-02-2022 */
+.elementor-heading-title{padding:0;margin:0;line-height:1}.elementor-widget-heading .elementor-heading-title[class*=elementor-size-]>a{color:inherit;font-size:inherit;line-height:inherit}.elementor-widget-heading .elementor-heading-title.elementor-size-small{font-size:15px}.elementor-widget-heading .elementor-heading-title.elementor-size-medium{font-size:19px}.elementor-widget-heading .elementor-heading-title.elementor-size-large{font-size:29px}.elementor-widget-heading .elementor-heading-title.elementor-size-xl{font-size:39px}.elementor-widget-heading .elementor-heading-title.elementor-size-xxl{font-size:59px}</style><h2 class="elementor-heading-title elementor-size-default">Venda produtos validados com tráfego direto sem precisar conversar com o cliente!</h2> </div>
+</div>
+</div>
+</div>
+<div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-22b6f58" data-id="22b6f58" data-element_type="column">
+<div class="elementor-widget-wrap">
+</div>
+</div>
+</div>
+</section>
+<section class="elementor-section elementor-inner-section elementor-element elementor-element-7568ae5 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="7568ae5" data-element_type="section">
+<div class="elementor-container elementor-column-gap-default">
+<div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-de3d6fc" data-id="de3d6fc" data-element_type="column">
+<div class="elementor-widget-wrap elementor-element-populated">
+<div class="elementor-element elementor-element-0048efd elementor-widget elementor-widget-heading" data-id="0048efd" data-element_type="widget" data-widget_type="heading.default">
+<div class="elementor-widget-container">
+<h2 class="elementor-heading-title elementor-size-default">Você vai aprender de fato a vender de forma automática, sem aparecer e sem precisar converter no um a um e sem precisar usar o Instagram! Isso tudo com a técnica de produtos validados e tráfego direto.</h2> </div>
+</div>
+<div class="elementor-element elementor-element-083c4fc elementor-mobile-align-center elementor-widget elementor-widget-button" data-id="083c4fc" data-element_type="widget" data-widget_type="button.default">
+<div class="elementor-widget-container">
+<div class="elementor-button-wrapper">
+<a href="https://pay.kiwify.com.br/zrurMTT?utm_source=resultados" class="elementor-button-link elementor-button elementor-size-sm elementor-animation-grow" role="button">
+<span class="elementor-button-content-wrapper">
+<span class="elementor-button-text">QUERO FAZER PARTE</span>
+</span>
+</a>
+</div>
+</div>
+</div>
+<div class="elementor-element elementor-element-95fa567 elementor-hidden-mobile elementor-view-default elementor-widget elementor-widget-icon" data-id="95fa567" data-element_type="widget" data-widget_type="icon.default">
+<div class="elementor-widget-container">
+<div class="elementor-icon-wrapper">
+<div class="elementor-icon">
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="63" viewBox="0 0 64 63" fill="none"><g filter="url(#filter0_b_183_2)"><circle cx="32" cy="26" r="26" fill="url(#paint0_linear_183_2)" fill-opacity="0.1"></circle></g><g filter="url(#filter1_d_183_2)"><circle cx="32" cy="26" r="25.35" stroke="url(#paint1_linear_183_2)" stroke-width="1.3"></circle></g><path d="M31.6464 38.3536C31.8417 38.5488 32.1583 38.5488 32.3536 38.3536L35.5355 35.1716C35.7308 34.9763 35.7308 34.6597 35.5355 34.4645C35.3403 34.2692 35.0237 34.2692 34.8284 34.4645L32 37.2929L29.1716 34.4645C28.9763 34.2692 28.6597 34.2692 28.4645 34.4645C28.2692 34.6597 28.2692 34.9763 28.4645 35.1716L31.6464 38.3536ZM31.5 14L31.5 38L32.5 38L32.5 14L31.5 14Z" fill="url(#paint2_linear_183_2)"></path><defs><filter id="filter0_b_183_2" x="-3" y="-9" width="70" height="70" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB"><feGaussianBlur stdDeviation="4.5"></feGaussianBlur></filter><filter id="filter1_d_183_2" x="0.8" y="0" width="62.4" height="62.4" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB"><feGaussianBlur stdDeviation="2.6"></feGaussianBlur></filter><linearGradient id="paint0_linear_183_2" x1="21.2195" y1="-28.08" x2="85.7244" y2="12.2928" gradientUnits="userSpaceOnUse"><stop stop-color="#EB1E43"></stop><stop offset="1" stop-color="#EB1E1E"></stop></linearGradient><linearGradient id="paint1_linear_183_2" x1="21.2195" y1="-28.08" x2="85.7244" y2="12.2928" gradientUnits="userSpaceOnUse"><stop stop-color="#EB1E43"></stop><stop offset="1" stop-color="#EB1E1E"></stop></linearGradient><linearGradient id="paint2_linear_183_2" x1="32.54" y1="21.0244" x2="29.7938" y2="21.2072" gradientUnits="userSpaceOnUse"><stop stop-color="#EB1E43"></stop><stop offset="1" stop-color="#EB1E1E"></stop></linearGradient></defs></svg> </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-794812b" data-id="794812b" data-element_type="column">
+<div class="elementor-widget-wrap">
+</div>
+</div>
+</div>
+</section>
+</div>
+</div>
+</div>
+</section>
+<section class="elementor-section elementor-top-section elementor-element elementor-element-e55ade0 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="e55ade0" data-element_type="section">
+<div class="elementor-container elementor-column-gap-default">
+<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-ce89738" data-id="ce89738" data-element_type="column">
+<div class="elementor-widget-wrap elementor-element-populated">
+<section class="elementor-section elementor-inner-section elementor-element elementor-element-a854850 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="a854850" data-element_type="section">
+<div class="elementor-container elementor-column-gap-default">
+<div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-ce9a8f5" data-id="ce9a8f5" data-element_type="column">
+<div class="elementor-widget-wrap elementor-element-populated">
+<div class="elementor-element elementor-element-afec83b elementor-widget elementor-widget-heading" data-id="afec83b" data-element_type="widget" data-widget_type="heading.default">
+<div class="elementor-widget-container">
+<h2 class="elementor-heading-title elementor-size-default">Confira alguns dos <span style="color:#EB1E43">resultados</span> de quem adquiriu a mentoria Next Level<span style="color:#EB1E43">...</span>
+</h2> </div>
+</div>
+</div>
+</div>
+<div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-d6e9531" data-id="d6e9531" data-element_type="column">
+<div class="elementor-widget-wrap elementor-element-populated">
+<div class="elementor-element elementor-element-aac141a elementor-hidden-mobile elementor-widget elementor-widget-image" data-id="aac141a" data-element_type="widget" data-widget_type="image.default">
+<div class="elementor-widget-container">
+<img decoding="async" fetchpriority="high" width="945" height="135" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20945%20135'%3E%3C/svg%3E" class="attachment-full size-full" alt data-lazy-srcset="https://nicoliheinig.com.br/wp-content/uploads/2023/06/Elements.webp 945w,   https://nicoliheinig.com.br/wp-content/uploads/2023/06/Elements-300x43.webp 300w,   https://nicoliheinig.com.br/wp-content/uploads/2023/06/Elements-768x110.webp 768w" data-lazy-sizes="(max-width: 945px) 100vw, 945px" data-lazy-src="https://nicoliheinig.com.br/wp-content/uploads/2023/06/Elements.webp" /><noscript><img decoding="async" fetchpriority="high" width="945" height="135" src="https://nicoliheinig.com.br/wp-content/uploads/2023/06/Elements.webp" class="attachment-full size-full" alt="" srcset="https://nicoliheinig.com.br/wp-content/uploads/2023/06/Elements.webp 945w,   https://nicoliheinig.com.br/wp-content/uploads/2023/06/Elements-300x43.webp 300w,   https://nicoliheinig.com.br/wp-content/uploads/2023/06/Elements-768x110.webp 768w" sizes="(max-width: 945px) 100vw, 945px" /></noscript> </div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<div class="elementor-element elementor-element-c47eb27 elementor-widget elementor-widget-gallery" data-id="c47eb27" data-element_type="widget" data-settings="{&quot;columns&quot;:3,&quot;aspect_ratio&quot;:&quot;9:16&quot;,&quot;lazyload&quot;:&quot;yes&quot;,&quot;gallery_layout&quot;:&quot;grid&quot;,&quot;columns_tablet&quot;:2,&quot;columns_mobile&quot;:1,&quot;gap_widescreen&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;gap&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:10,&quot;sizes&quot;:[]},&quot;gap_laptop&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:10,&quot;sizes&quot;:[]},&quot;gap_tablet&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:10,&quot;sizes&quot;:[]},&quot;gap_mobile&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:10,&quot;sizes&quot;:[]},&quot;overlay_background&quot;:&quot;yes&quot;,&quot;content_hover_animation&quot;:&quot;fade-in&quot;}" data-widget_type="gallery.default">
+<div class="elementor-widget-container">
+<style>/*! elementor-pro - v3.6.3 - 28-02-2022 */
+.elementor-gallery__container{min-height:1px}.elementor-gallery-item{position:relative;overflow:hidden;display:block;text-decoration:none;border:solid var(--image-border-width) var(--image-border-color);border-radius:var(--image-border-radius)}.elementor-gallery-item__content,.elementor-gallery-item__overlay{height:100%;width:100%;position:absolute;top:0;left:0}.elementor-gallery-item__overlay{mix-blend-mode:var(--overlay-mix-blend-mode);-webkit-transition-duration:var(--overlay-transition-duration);-o-transition-duration:var(--overlay-transition-duration);transition-duration:var(--overlay-transition-duration);-webkit-transition-property:mix-blend-mode,opacity,background-color,-webkit-transform;transition-property:mix-blend-mode,opacity,background-color,-webkit-transform;-o-transition-property:mix-blend-mode,transform,opacity,background-color;transition-property:mix-blend-mode,transform,opacity,background-color;transition-property:mix-blend-mode,transform,opacity,background-color,-webkit-transform}.elementor-gallery-item__image.e-gallery-image{-webkit-transition-duration:var(--image-transition-duration);-o-transition-duration:var(--image-transition-duration);transition-duration:var(--image-transition-duration);-webkit-transition-property:-webkit-filter,-webkit-transform;transition-property:-webkit-filter,-webkit-transform;-o-transition-property:filter,transform;transition-property:filter,transform;transition-property:filter,transform,-webkit-filter,-webkit-transform}.elementor-gallery-item__content{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;-webkit-box-pack:var(--content-justify-content,center);-ms-flex-pack:var(--content-justify-content,center);justify-content:var(--content-justify-content,center);-webkit-box-align:center;-ms-flex-align:center;align-items:center;text-align:var(--content-text-align);padding:var(--content-padding)}.elementor-gallery-item__content>div{-webkit-transition-duration:var(--content-transition-duration);-o-transition-duration:var(--content-transition-duration);transition-duration:var(--content-transition-duration)}.elementor-gallery-item__content.elementor-gallery--sequenced-animation>div:nth-child(2){-webkit-transition-delay:calc((var(--content-transition-delay) / 3));-o-transition-delay:calc((var(--content-transition-delay) / 3));transition-delay:calc((var(--content-transition-delay) / 3))}.elementor-gallery-item__content.elementor-gallery--sequenced-animation>div:nth-child(3){-webkit-transition-delay:calc((var(--content-transition-delay) / 3) * 2);-o-transition-delay:calc((var(--content-transition-delay) / 3) * 2);transition-delay:calc((var(--content-transition-delay) / 3) * 2)}.elementor-gallery-item__content.elementor-gallery--sequenced-animation>div:nth-child(4){-webkit-transition-delay:calc((var(--content-transition-delay) / 3) * 3);-o-transition-delay:calc((var(--content-transition-delay) / 3) * 3);transition-delay:calc((var(--content-transition-delay) / 3) * 3)}.elementor-gallery-item__description{color:var(--description-text-color,#fff);width:100%}.elementor-gallery-item__title{color:var(--title-text-color,#fff);font-weight:700;width:100%}.elementor-gallery__titles-container{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-pack:var(--titles-container-justify-content,center);-ms-flex-pack:var(--titles-container-justify-content,center);justify-content:var(--titles-container-justify-content,center);margin-bottom:20px}.elementor-gallery__titles-container:not(.e--pointer-framed) .elementor-item:after,.elementor-gallery__titles-container:not(.e--pointer-framed) .elementor-item:before{background-color:var(--galleries-pointer-bg-color-hover)}.elementor-gallery__titles-container:not(.e--pointer-framed) .elementor-item.elementor-item-active:after,.elementor-gallery__titles-container:not(.e--pointer-framed) .elementor-item.elementor-item-active:before{background-color:var(--galleries-pointer-bg-color-active)}.elementor-gallery__titles-container.e--pointer-framed .elementor-item:before{border-color:var(--galleries-pointer-bg-color-hover);border-width:var(--galleries-pointer-border-width)}.elementor-gallery__titles-container.e--pointer-framed .elementor-item:after{border-color:var(--galleries-pointer-bg-color-hover)}.elementor-gallery__titles-container.e--pointer-framed .elementor-item.elementor-item-active:after,.elementor-gallery__titles-container.e--pointer-framed .elementor-item.elementor-item-active:before{border-color:var(--galleries-pointer-bg-color-active)}.elementor-gallery__titles-container.e--pointer-framed.e--animation-draw .elementor-item:before{border-left-width:var(--galleries-pointer-border-width);border-bottom-width:var(--galleries-pointer-border-width);border-right-width:0;border-top-width:0}.elementor-gallery__titles-container.e--pointer-framed.e--animation-draw .elementor-item:after{border-left-width:0;border-bottom-width:0;border-right-width:var(--galleries-pointer-border-width);border-top-width:var(--galleries-pointer-border-width)}.elementor-gallery__titles-container.e--pointer-framed.e--animation-corners .elementor-item:before{border-left-width:var(--galleries-pointer-border-width);border-bottom-width:0;border-right-width:0;border-top-width:var(--galleries-pointer-border-width)}.elementor-gallery__titles-container.e--pointer-framed.e--animation-corners .elementor-item:after{border-left-width:0;border-bottom-width:var(--galleries-pointer-border-width);border-right-width:var(--galleries-pointer-border-width);border-top-width:0}.elementor-gallery__titles-container .e--pointer-double-line .elementor-item:after,.elementor-gallery__titles-container .e--pointer-double-line .elementor-item:before,.elementor-gallery__titles-container .e--pointer-overline .elementor-item:before,.elementor-gallery__titles-container .e--pointer-underline .elementor-item:after{height:var(--galleries-pointer-border-width)}.elementor-gallery-title{--space-between:10px;cursor:pointer;color:#6d7882;font-weight:500;position:relative;padding:7px 14px;-webkit-transition:all .3s;-o-transition:all .3s;transition:all .3s}.elementor-gallery-title--active{color:#495157}.elementor-gallery-title:not(:last-child){margin-right:var(--space-between)}.elementor-gallery-item__title+.elementor-gallery-item__description{margin-top:var(--description-margin-top)}.e-gallery-item.elementor-gallery-item{-webkit-transition-property:all;-o-transition-property:all;transition-property:all}.e-gallery-item.elementor-animated-content .elementor-animated-item--enter-from-bottom,.e-gallery-item.elementor-animated-content .elementor-animated-item--enter-from-left,.e-gallery-item.elementor-animated-content .elementor-animated-item--enter-from-right,.e-gallery-item.elementor-animated-content .elementor-animated-item--enter-from-top,.e-gallery-item:hover .elementor-gallery__item-overlay-bg,.e-gallery-item:hover .elementor-gallery__item-overlay-content,.e-gallery-item:hover .elementor-gallery__item-overlay-content__description,.e-gallery-item:hover .elementor-gallery__item-overlay-content__title{opacity:1}a.elementor-item.elementor-gallery-title{color:var(--galleries-title-color-normal)}a.elementor-item.elementor-gallery-title.elementor-item-active,a.elementor-item.elementor-gallery-title.highlighted,a.elementor-item.elementor-gallery-title:focus,a.elementor-item.elementor-gallery-title:hover{color:var(--galleries-title-color-hover)}a.elementor-item.elementor-gallery-title.elementor-item-active{color:var(--gallery-title-color-active)}</style> <div class="elementor-gallery__container">
+<div class="e-gallery-item elementor-gallery-item elementor-animated-content">
+<div class="e-gallery-image elementor-gallery-item__image" data-thumbnail="https://nicoliheinig.com.br/wp-content/uploads/2023/09/IMG_6810-563x1024.jpg" data-width="563" data-height="1024" alt></div>
+<div class="elementor-gallery-item__overlay"></div>
+</div>
+<div class="e-gallery-item elementor-gallery-item elementor-animated-content">
+<div class="e-gallery-image elementor-gallery-item__image" data-thumbnail="https://nicoliheinig.com.br/wp-content/uploads/2023/09/IMG_6792-558x1024.jpg" data-width="558" data-height="1024" alt></div>
+<div class="elementor-gallery-item__overlay"></div>
+</div>
+<div class="e-gallery-item elementor-gallery-item elementor-animated-content">
+<div class="e-gallery-image elementor-gallery-item__image" data-thumbnail="https://nicoliheinig.com.br/wp-content/uploads/2023/09/IMG_6795-557x1024.jpg" data-width="557" data-height="1024" alt></div>
+<div class="elementor-gallery-item__overlay"></div>
+</div>
+<div class="e-gallery-item elementor-gallery-item elementor-animated-content">
+<div class="e-gallery-image elementor-gallery-item__image" data-thumbnail="https://nicoliheinig.com.br/wp-content/uploads/2023/09/IMG_6806-557x1024.jpg" data-width="557" data-height="1024" alt></div>
+<div class="elementor-gallery-item__overlay"></div>
+</div>
+<div class="e-gallery-item elementor-gallery-item elementor-animated-content">
+<div class="e-gallery-image elementor-gallery-item__image" data-thumbnail="https://nicoliheinig.com.br/wp-content/uploads/2023/09/IMG_6796-559x1024.jpg" data-width="559" data-height="1024" alt></div>
+<div class="elementor-gallery-item__overlay"></div>
+</div>
+<div class="e-gallery-item elementor-gallery-item elementor-animated-content">
+<div class="e-gallery-image elementor-gallery-item__image" data-thumbnail="https://nicoliheinig.com.br/wp-content/uploads/2023/09/IMG_6802-560x1024.jpg" data-width="560" data-height="1024" alt></div>
+<div class="elementor-gallery-item__overlay"></div>
+</div>
+<div class="e-gallery-item elementor-gallery-item elementor-animated-content">
+<div class="e-gallery-image elementor-gallery-item__image" data-thumbnail="https://nicoliheinig.com.br/wp-content/uploads/2023/09/IMG_6797-560x1024.jpg" data-width="560" data-height="1024" alt></div>
+<div class="elementor-gallery-item__overlay"></div>
+</div>
+<div class="e-gallery-item elementor-gallery-item elementor-animated-content">
+<div class="e-gallery-image elementor-gallery-item__image" data-thumbnail="https://nicoliheinig.com.br/wp-content/uploads/2023/09/IMG_6791-559x1024.jpg" data-width="559" data-height="1024" alt></div>
+<div class="elementor-gallery-item__overlay"></div>
+</div>
+<div class="e-gallery-item elementor-gallery-item elementor-animated-content">
+<div class="e-gallery-image elementor-gallery-item__image" data-thumbnail="https://nicoliheinig.com.br/wp-content/uploads/2023/09/IMG_6789-562x1024.jpg" data-width="562" data-height="1024" alt></div>
+<div class="elementor-gallery-item__overlay"></div>
+</div>
+<div class="e-gallery-item elementor-gallery-item elementor-animated-content">
+<div class="e-gallery-image elementor-gallery-item__image" data-thumbnail="https://nicoliheinig.com.br/wp-content/uploads/2023/09/IMG_6800-558x1024.jpg" data-width="558" data-height="1024" alt></div>
+<div class="elementor-gallery-item__overlay"></div>
+</div>
+<div class="e-gallery-item elementor-gallery-item elementor-animated-content">
+<div class="e-gallery-image elementor-gallery-item__image" data-thumbnail="https://nicoliheinig.com.br/wp-content/uploads/2023/09/IMG_6793-560x1024.jpg" data-width="560" data-height="1024" alt></div>
+<div class="elementor-gallery-item__overlay"></div>
+</div>
+<div class="e-gallery-item elementor-gallery-item elementor-animated-content">
+<div class="e-gallery-image elementor-gallery-item__image" data-thumbnail="https://nicoliheinig.com.br/wp-content/uploads/2023/09/IMG_6799-559x1024.jpg" data-width="559" data-height="1024" alt></div>
+<div class="elementor-gallery-item__overlay"></div>
+</div>
+<div class="e-gallery-item elementor-gallery-item elementor-animated-content">
+<div class="e-gallery-image elementor-gallery-item__image" data-thumbnail="https://nicoliheinig.com.br/wp-content/uploads/2023/09/IMG_6798-558x1024.jpg" data-width="558" data-height="1024" alt></div>
+<div class="elementor-gallery-item__overlay"></div>
+</div>
+<div class="e-gallery-item elementor-gallery-item elementor-animated-content">
+<div class="e-gallery-image elementor-gallery-item__image" data-thumbnail="https://nicoliheinig.com.br/wp-content/uploads/2023/09/IMG_6805-563x1024.jpg" data-width="563" data-height="1024" alt></div>
+<div class="elementor-gallery-item__overlay"></div>
+</div>
+<div class="e-gallery-item elementor-gallery-item elementor-animated-content">
+<div class="e-gallery-image elementor-gallery-item__image" data-thumbnail="https://nicoliheinig.com.br/wp-content/uploads/2023/09/IMG_6790-559x1024.jpg" data-width="559" data-height="1024" alt></div>
+<div class="elementor-gallery-item__overlay"></div>
+</div>
+<div class="e-gallery-item elementor-gallery-item elementor-animated-content">
+<div class="e-gallery-image elementor-gallery-item__image" data-thumbnail="https://nicoliheinig.com.br/wp-content/uploads/2023/09/IMG_6811-560x1024.jpg" data-width="560" data-height="1024" alt></div>
+<div class="elementor-gallery-item__overlay"></div>
+</div>
+<div class="e-gallery-item elementor-gallery-item elementor-animated-content">
+<div class="e-gallery-image elementor-gallery-item__image" data-thumbnail="https://nicoliheinig.com.br/wp-content/uploads/2023/09/IMG_6801-558x1024.jpg" data-width="558" data-height="1024" alt></div>
+<div class="elementor-gallery-item__overlay"></div>
+</div>
+<div class="e-gallery-item elementor-gallery-item elementor-animated-content">
+<div class="e-gallery-image elementor-gallery-item__image" data-thumbnail="https://nicoliheinig.com.br/wp-content/uploads/2023/09/IMG_6803-560x1024.jpg" data-width="560" data-height="1024" alt></div>
+<div class="elementor-gallery-item__overlay"></div>
+</div>
+<div class="e-gallery-item elementor-gallery-item elementor-animated-content">
+<div class="e-gallery-image elementor-gallery-item__image" data-thumbnail="https://nicoliheinig.com.br/wp-content/uploads/2023/09/IMG_6804-563x1024.jpg" data-width="563" data-height="1024" alt></div>
+<div class="elementor-gallery-item__overlay"></div>
+</div>
+<div class="e-gallery-item elementor-gallery-item elementor-animated-content">
+<div class="e-gallery-image elementor-gallery-item__image" data-thumbnail="https://nicoliheinig.com.br/wp-content/uploads/2023/09/IMG_6807-555x1024.jpg" data-width="555" data-height="1024" alt></div>
+<div class="elementor-gallery-item__overlay"></div>
+</div>
+<div class="e-gallery-item elementor-gallery-item elementor-animated-content">
+<div class="e-gallery-image elementor-gallery-item__image" data-thumbnail="https://nicoliheinig.com.br/wp-content/uploads/2023/09/IMG_6809-559x1024.jpg" data-width="559" data-height="1024" alt></div>
+<div class="elementor-gallery-item__overlay"></div>
+</div>
+<div class="e-gallery-item elementor-gallery-item elementor-animated-content">
+<div class="e-gallery-image elementor-gallery-item__image" data-thumbnail="https://nicoliheinig.com.br/wp-content/uploads/2023/09/IMG_6787-556x1024.jpg" data-width="556" data-height="1024" alt></div>
+<div class="elementor-gallery-item__overlay"></div>
+</div>
+<div class="e-gallery-item elementor-gallery-item elementor-animated-content">
+<div class="e-gallery-image elementor-gallery-item__image" data-thumbnail="https://nicoliheinig.com.br/wp-content/uploads/2023/09/IMG_6788-554x1024.jpg" data-width="554" data-height="1024" alt></div>
+<div class="elementor-gallery-item__overlay"></div>
+</div>
+<div class="e-gallery-item elementor-gallery-item elementor-animated-content">
+<div class="e-gallery-image elementor-gallery-item__image" data-thumbnail="https://nicoliheinig.com.br/wp-content/uploads/2023/09/IMG_6808-582x1024.jpg" data-width="582" data-height="1024" alt></div>
+<div class="elementor-gallery-item__overlay"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="elementor-element elementor-element-684296f elementor-align-center elementor-mobile-align-center elementor-widget elementor-widget-button" data-id="684296f" data-element_type="widget" data-widget_type="button.default">
+<div class="elementor-widget-container">
+<div class="elementor-button-wrapper">
+<a href="https://pay.kiwify.com.br/zrurMTT" class="elementor-button-link elementor-button elementor-size-sm elementor-animation-grow" role="button">
+<span class="elementor-button-content-wrapper">
+<span class="elementor-button-text">OBTER ACESSO IMEDIATO</span>
+</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="elementor-section elementor-top-section elementor-element elementor-element-51809b4 elementor-hidden-widescreen elementor-hidden-desktop elementor-hidden-laptop elementor-hidden-tablet elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="51809b4" data-element_type="section">
+<div class="elementor-container elementor-column-gap-default">
+<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-837b55c" data-id="837b55c" data-element_type="column" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+<div class="elementor-widget-wrap elementor-element-populated">
+<div class="elementor-element elementor-element-824b1f6 elementor-widget elementor-widget-image" data-id="824b1f6" data-element_type="widget" data-widget_type="image.default">
+<div class="elementor-widget-container">
+<img decoding="async" width="584" height="602" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20584%20602'%3E%3C/svg%3E" class="attachment-full size-full" alt data-lazy-srcset="https://nicoliheinig.com.br/wp-content/uploads/2023/06/MANIPULAÇÃO-PÁGINA-3-1-2.webp 584w,   https://nicoliheinig.com.br/wp-content/uploads/2023/06/MANIPULAÇÃO-PÁGINA-3-1-2-291x300.webp 291w" data-lazy-sizes="(max-width: 584px) 100vw, 584px" data-lazy-src="https://nicoliheinig.com.br/wp-content/uploads/2023/06/MANIPULAÇÃO-PÁGINA-3-1-2.webp" /><noscript><img decoding="async" width="584" height="602" src="https://nicoliheinig.com.br/wp-content/uploads/2023/06/MANIPULAÇÃO-PÁGINA-3-1-2.webp" class="attachment-full size-full" alt="" srcset="https://nicoliheinig.com.br/wp-content/uploads/2023/06/MANIPULAÇÃO-PÁGINA-3-1-2.webp 584w,   https://nicoliheinig.com.br/wp-content/uploads/2023/06/MANIPULAÇÃO-PÁGINA-3-1-2-291x300.webp 291w" sizes="(max-width: 584px) 100vw, 584px" /></noscript> </div>
+</div>
+<section class="elementor-section elementor-inner-section elementor-element elementor-element-41fdd43 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="41fdd43" data-element_type="section">
+<div class="elementor-container elementor-column-gap-default">
+<div class="elementor-column elementor-col-100 elementor-inner-column elementor-element elementor-element-17725e4" data-id="17725e4" data-element_type="column">
+<div class="elementor-widget-wrap elementor-element-populated">
+<div class="elementor-element elementor-element-ba09b88 elementor-widget elementor-widget-image" data-id="ba09b88" data-element_type="widget" data-widget_type="image.default">
+<div class="elementor-widget-container">
+<img decoding="async" width="121" height="42" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20121%2042'%3E%3C/svg%3E" class="attachment-full size-full" alt data-lazy-src="https://nicoliheinig.com.br/wp-content/uploads/2023/06/logo.webp" /><noscript><img decoding="async" width="121" height="42" src="https://nicoliheinig.com.br/wp-content/uploads/2023/06/logo.webp" class="attachment-full size-full" alt="" /></noscript> </div>
+</div>
+<div class="elementor-element elementor-element-0b8c46f elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list" data-id="0b8c46f" data-element_type="widget" data-widget_type="icon-list.default">
+<div class="elementor-widget-container">
+<style>.elementor-widget.elementor-icon-list--layout-inline .elementor-widget-container{overflow:hidden}.elementor-widget .elementor-icon-list-items.elementor-inline-items{margin-right:-8px;margin-left:-8px}.elementor-widget .elementor-icon-list-items.elementor-inline-items .elementor-icon-list-item{margin-right:8px;margin-left:8px}.elementor-widget .elementor-icon-list-items.elementor-inline-items .elementor-icon-list-item:after{width:auto;left:auto;right:auto;position:relative;height:100%;border-top:0;border-bottom:0;border-right:0;border-left-width:1px;border-style:solid;right:-8px}.elementor-widget .elementor-icon-list-items{list-style-type:none;margin:0;padding:0}.elementor-widget .elementor-icon-list-item{margin:0;padding:0;position:relative}.elementor-widget .elementor-icon-list-item:after{position:absolute;bottom:0;width:100%}.elementor-widget .elementor-icon-list-item,.elementor-widget .elementor-icon-list-item a{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;font-size:inherit}.elementor-widget .elementor-icon-list-icon+.elementor-icon-list-text{-ms-flex-item-align:center;align-self:center;padding-left:5px}.elementor-widget .elementor-icon-list-icon{display:-webkit-box;display:-ms-flexbox;display:flex}.elementor-widget .elementor-icon-list-icon svg{width:var(--e-icon-list-icon-size,1em);height:var(--e-icon-list-icon-size,1em)}.elementor-widget .elementor-icon-list-icon i{width:1.25em;font-size:var(--e-icon-list-icon-size)}.elementor-widget.elementor-widget-icon-list .elementor-icon-list-icon{text-align:var(--e-icon-list-icon-align)}.elementor-widget.elementor-widget-icon-list .elementor-icon-list-icon svg{margin:var(--e-icon-list-icon-margin,0 calc(var(--e-icon-list-icon-size, 1em) * .25) 0 0)}.elementor-widget.elementor-list-item-link-full_width a{width:100%}.elementor-widget.elementor-align-center .elementor-icon-list-item,.elementor-widget.elementor-align-center .elementor-icon-list-item a{-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center}.elementor-widget.elementor-align-center .elementor-icon-list-item:after{margin:auto}.elementor-widget.elementor-align-center .elementor-inline-items{-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center}.elementor-widget.elementor-align-left .elementor-icon-list-item,.elementor-widget.elementor-align-left .elementor-icon-list-item a{-webkit-box-pack:start;-ms-flex-pack:start;justify-content:flex-start;text-align:left}.elementor-widget.elementor-align-left .elementor-inline-items{-webkit-box-pack:start;-ms-flex-pack:start;justify-content:flex-start}.elementor-widget.elementor-align-right .elementor-icon-list-item,.elementor-widget.elementor-align-right .elementor-icon-list-item a{-webkit-box-pack:end;-ms-flex-pack:end;justify-content:flex-end;text-align:right}.elementor-widget.elementor-align-right .elementor-icon-list-items{-webkit-box-pack:end;-ms-flex-pack:end;justify-content:flex-end}.elementor-widget:not(.elementor-align-right) .elementor-icon-list-item:after{left:0}.elementor-widget:not(.elementor-align-left) .elementor-icon-list-item:after{right:0}@media (max-width:1024px){.elementor-widget.elementor-tablet-align-center .elementor-icon-list-item,.elementor-widget.elementor-tablet-align-center .elementor-icon-list-item a,.elementor-widget.elementor-tablet-align-center .elementor-icon-list-items{-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center}.elementor-widget.elementor-tablet-align-center .elementor-icon-list-item:after{margin:auto}.elementor-widget.elementor-tablet-align-left .elementor-icon-list-items{-webkit-box-pack:start;-ms-flex-pack:start;justify-content:flex-start}.elementor-widget.elementor-tablet-align-left .elementor-icon-list-item,.elementor-widget.elementor-tablet-align-left .elementor-icon-list-item a{-webkit-box-pack:start;-ms-flex-pack:start;justify-content:flex-start;text-align:left}.elementor-widget.elementor-tablet-align-right .elementor-icon-list-items{-webkit-box-pack:end;-ms-flex-pack:end;justify-content:flex-end}.elementor-widget.elementor-tablet-align-right .elementor-icon-list-item,.elementor-widget.elementor-tablet-align-right .elementor-icon-list-item a{-webkit-box-pack:end;-ms-flex-pack:end;justify-content:flex-end;text-align:right}.elementor-widget:not(.elementor-tablet-align-right) .elementor-icon-list-item:after{left:0}.elementor-widget:not(.elementor-tablet-align-left) .elementor-icon-list-item:after{right:0}}@media (max-width:767px){.elementor-widget.elementor-mobile-align-center .elementor-icon-list-item,.elementor-widget.elementor-mobile-align-center .elementor-icon-list-item a,.elementor-widget.elementor-mobile-align-center .elementor-icon-list-items{-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center}.elementor-widget.elementor-mobile-align-center .elementor-icon-list-item:after{margin:auto}.elementor-widget.elementor-mobile-align-left .elementor-icon-list-items{-webkit-box-pack:start;-ms-flex-pack:start;justify-content:flex-start}.elementor-widget.elementor-mobile-align-left .elementor-icon-list-item,.elementor-widget.elementor-mobile-align-left .elementor-icon-list-item a{-webkit-box-pack:start;-ms-flex-pack:start;justify-content:flex-start;text-align:left}.elementor-widget.elementor-mobile-align-right .elementor-icon-list-items{-webkit-box-pack:end;-ms-flex-pack:end;justify-content:flex-end}.elementor-widget.elementor-mobile-align-right .elementor-icon-list-item,.elementor-widget.elementor-mobile-align-right .elementor-icon-list-item a{-webkit-box-pack:end;-ms-flex-pack:end;justify-content:flex-end;text-align:right}.elementor-widget:not(.elementor-mobile-align-right) .elementor-icon-list-item:after{left:0}.elementor-widget:not(.elementor-mobile-align-left) .elementor-icon-list-item:after{right:0}}</style> <ul class="elementor-icon-list-items">
+<li class="elementor-icon-list-item">
+<span class="elementor-icon-list-icon">
+<svg xmlns="http://www.w3.org/2000/svg" width="18" height="14" viewBox="0 0 18 14" fill="none"><path d="M17 1.59961L6 12.5996L1 7.59961" stroke="url(#paint0_linear_48_340)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path><defs><linearGradient id="paint0_linear_48_340" x1="5.68293" y1="-4.34039" x2="20.7872" y2="9.41029" gradientUnits="userSpaceOnUse"><stop stop-color="#EB1E43"></stop><stop offset="1" stop-color="#EB1E1E"></stop></linearGradient></defs></svg> </span>
+<span class="elementor-icon-list-text">Mentoria Semanal</span>
+</li>
+<li class="elementor-icon-list-item">
+<span class="elementor-icon-list-icon">
+<svg xmlns="http://www.w3.org/2000/svg" width="18" height="14" viewBox="0 0 18 14" fill="none"><path d="M17 1.59961L6 12.5996L1 7.59961" stroke="url(#paint0_linear_48_340)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path><defs><linearGradient id="paint0_linear_48_340" x1="5.68293" y1="-4.34039" x2="20.7872" y2="9.41029" gradientUnits="userSpaceOnUse"><stop stop-color="#EB1E43"></stop><stop offset="1" stop-color="#EB1E1E"></stop></linearGradient></defs></svg> </span>
+<span class="elementor-icon-list-text">Produtos validados</span>
+</li>
+<li class="elementor-icon-list-item">
+<span class="elementor-icon-list-icon">
+<svg xmlns="http://www.w3.org/2000/svg" width="18" height="14" viewBox="0 0 18 14" fill="none"><path d="M17 1.59961L6 12.5996L1 7.59961" stroke="url(#paint0_linear_48_340)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path><defs><linearGradient id="paint0_linear_48_340" x1="5.68293" y1="-4.34039" x2="20.7872" y2="9.41029" gradientUnits="userSpaceOnUse"><stop stop-color="#EB1E43"></stop><stop offset="1" stop-color="#EB1E1E"></stop></linearGradient></defs></svg> </span>
+<span class="elementor-icon-list-text">Suporte exclusivo e 24/7</span>
+</li>
+<li class="elementor-icon-list-item">
+<span class="elementor-icon-list-icon">
+<svg xmlns="http://www.w3.org/2000/svg" width="18" height="14" viewBox="0 0 18 14" fill="none"><path d="M17 1.59961L6 12.5996L1 7.59961" stroke="url(#paint0_linear_48_340)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path><defs><linearGradient id="paint0_linear_48_340" x1="5.68293" y1="-4.34039" x2="20.7872" y2="9.41029" gradientUnits="userSpaceOnUse"><stop stop-color="#EB1E43"></stop><stop offset="1" stop-color="#EB1E1E"></stop></linearGradient></defs></svg> </span>
+<span class="elementor-icon-list-text">Conteúdo novo toda semana</span>
+</li>
+</ul>
+</div>
+</div>
+<div class="elementor-element elementor-element-8263524 elementor-widget elementor-widget-heading" data-id="8263524" data-element_type="widget" data-widget_type="heading.default">
+<div class="elementor-widget-container">
+<h2 class="elementor-heading-title elementor-size-default">Somando tudo daria mais de R$1.000,00…</h2> </div>
+</div>
+<div class="elementor-element elementor-element-e473c98 elementor-widget elementor-widget-heading" data-id="e473c98" data-element_type="widget" data-widget_type="heading.default">
+<div class="elementor-widget-container">
+<h2 class="elementor-heading-title elementor-size-default">Mas se você adquirir ainda hoje, tudo isso sai por somente…</h2> </div>
+</div>
+<div class="elementor-element elementor-element-b329a22 elementor-widget elementor-widget-heading" data-id="b329a22" data-element_type="widget" data-widget_type="heading.default">
+<div class="elementor-widget-container">
+<h2 class="elementor-heading-title elementor-size-default">de R$1.000,00…</h2> </div>
+</div>
+<div class="elementor-element elementor-element-0bbbf55 elementor-widget elementor-widget-image" data-id="0bbbf55" data-element_type="widget" data-widget_type="image.default">
+<div class="elementor-widget-container">
+<img decoding="async" width="115" height="40" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20115%2040'%3E%3C/svg%3E" class="attachment-full size-full" alt data-lazy-src="https://nicoliheinig.com.br/wp-content/uploads/2023/06/60-off.webp" /><noscript><img decoding="async" width="115" height="40" src="https://nicoliheinig.com.br/wp-content/uploads/2023/06/60-off.webp" class="attachment-full size-full" alt="" /></noscript> </div>
+</div>
+<div class="elementor-element elementor-element-16937e2 elementor-widget elementor-widget-heading" data-id="16937e2" data-element_type="widget" data-widget_type="heading.default">
+<div class="elementor-widget-container">
+<h2 class="elementor-heading-title elementor-size-default">por 12x R$39,86</h2> </div>
+</div>
+<div class="elementor-element elementor-element-c7709ca elementor-widget elementor-widget-heading" data-id="c7709ca" data-element_type="widget" data-widget_type="heading.default">
+<div class="elementor-widget-container">
+<h2 class="elementor-heading-title elementor-size-default">ou R$397 à vista</h2> </div>
+</div>
+<div class="elementor-element elementor-element-96bb11b elementor-align-center elementor-widget elementor-widget-button" data-id="96bb11b" data-element_type="widget" data-widget_type="button.default">
+<div class="elementor-widget-container">
+<div class="elementor-button-wrapper">
+<a href="https://pay.kiwify.com.br/zrurMTT?utm_source=resultados" class="elementor-button-link elementor-button elementor-size-sm elementor-animation-grow" role="button">
+<span class="elementor-button-content-wrapper">
+<span class="elementor-button-text">OBTER ACESSO IMEDIATO</span>
+</span>
+</a>
+</div>
+</div>
+</div>
+<div class="elementor-element elementor-element-664d18e elementor-widget elementor-widget-image" data-id="664d18e" data-element_type="widget" data-widget_type="image.default">
+<div class="elementor-widget-container">
+<img decoding="async" width="336" height="32" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20336%2032'%3E%3C/svg%3E" class="attachment-full size-full" alt data-lazy-srcset="https://nicoliheinig.com.br/wp-content/uploads/2023/06/Group-101450.webp 336w,   https://nicoliheinig.com.br/wp-content/uploads/2023/06/Group-101450-300x29.webp 300w" data-lazy-sizes="(max-width: 336px) 100vw, 336px" data-lazy-src="https://nicoliheinig.com.br/wp-content/uploads/2023/06/Group-101450.webp" /><noscript><img decoding="async" width="336" height="32" src="https://nicoliheinig.com.br/wp-content/uploads/2023/06/Group-101450.webp" class="attachment-full size-full" alt="" srcset="https://nicoliheinig.com.br/wp-content/uploads/2023/06/Group-101450.webp 336w,   https://nicoliheinig.com.br/wp-content/uploads/2023/06/Group-101450-300x29.webp 300w" sizes="(max-width: 336px) 100vw, 336px" /></noscript> </div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+</div>
+<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-8173cc3" data-id="8173cc3" data-element_type="column">
+<div class="elementor-widget-wrap">
+</div>
+</div>
+</div>
+</section>
+<section class="elementor-section elementor-top-section elementor-element elementor-element-9cf2beb elementor-hidden-mobile elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="9cf2beb" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+<div class="elementor-container elementor-column-gap-default">
+<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-85f905d" data-id="85f905d" data-element_type="column" data-settings="{&quot;background_background&quot;:&quot;gradient&quot;}">
+<div class="elementor-widget-wrap elementor-element-populated">
+<div class="elementor-element elementor-element-f2c309d elementor-widget elementor-widget-image" data-id="f2c309d" data-element_type="widget" data-widget_type="image.default">
+<div class="elementor-widget-container">
+<img decoding="async" width="121" height="42" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20121%2042'%3E%3C/svg%3E" class="attachment-full size-full" alt data-lazy-src="https://nicoliheinig.com.br/wp-content/uploads/2023/06/logo.webp" /><noscript><img decoding="async" width="121" height="42" src="https://nicoliheinig.com.br/wp-content/uploads/2023/06/logo.webp" class="attachment-full size-full" alt="" /></noscript> </div>
+</div>
+<div class="elementor-element elementor-element-8da937f elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list" data-id="8da937f" data-element_type="widget" data-widget_type="icon-list.default">
+<div class="elementor-widget-container">
+<ul class="elementor-icon-list-items">
+<li class="elementor-icon-list-item">
+<span class="elementor-icon-list-icon">
+<svg xmlns="http://www.w3.org/2000/svg" width="18" height="14" viewBox="0 0 18 14" fill="none"><path d="M17 1.59961L6 12.5996L1 7.59961" stroke="url(#paint0_linear_48_340)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path><defs><linearGradient id="paint0_linear_48_340" x1="5.68293" y1="-4.34039" x2="20.7872" y2="9.41029" gradientUnits="userSpaceOnUse"><stop stop-color="#EB1E43"></stop><stop offset="1" stop-color="#EB1E1E"></stop></linearGradient></defs></svg> </span>
+<span class="elementor-icon-list-text">Mentoria Semanal</span>
+</li>
+<li class="elementor-icon-list-item">
+<span class="elementor-icon-list-icon">
+<svg xmlns="http://www.w3.org/2000/svg" width="18" height="14" viewBox="0 0 18 14" fill="none"><path d="M17 1.59961L6 12.5996L1 7.59961" stroke="url(#paint0_linear_48_340)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path><defs><linearGradient id="paint0_linear_48_340" x1="5.68293" y1="-4.34039" x2="20.7872" y2="9.41029" gradientUnits="userSpaceOnUse"><stop stop-color="#EB1E43"></stop><stop offset="1" stop-color="#EB1E1E"></stop></linearGradient></defs></svg> </span>
+<span class="elementor-icon-list-text">Produtos validados</span>
+</li>
+<li class="elementor-icon-list-item">
+<span class="elementor-icon-list-icon">
+<svg xmlns="http://www.w3.org/2000/svg" width="18" height="14" viewBox="0 0 18 14" fill="none"><path d="M17 1.59961L6 12.5996L1 7.59961" stroke="url(#paint0_linear_48_340)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path><defs><linearGradient id="paint0_linear_48_340" x1="5.68293" y1="-4.34039" x2="20.7872" y2="9.41029" gradientUnits="userSpaceOnUse"><stop stop-color="#EB1E43"></stop><stop offset="1" stop-color="#EB1E1E"></stop></linearGradient></defs></svg> </span>
+<span class="elementor-icon-list-text">Suporte exclusivo e 24/7</span>
+</li>
+<li class="elementor-icon-list-item">
+<span class="elementor-icon-list-icon">
+<svg xmlns="http://www.w3.org/2000/svg" width="18" height="14" viewBox="0 0 18 14" fill="none"><path d="M17 1.59961L6 12.5996L1 7.59961" stroke="url(#paint0_linear_48_340)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path><defs><linearGradient id="paint0_linear_48_340" x1="5.68293" y1="-4.34039" x2="20.7872" y2="9.41029" gradientUnits="userSpaceOnUse"><stop stop-color="#EB1E43"></stop><stop offset="1" stop-color="#EB1E1E"></stop></linearGradient></defs></svg> </span>
+<span class="elementor-icon-list-text">Conteúdo novo toda semana</span>
+</li>
+</ul>
+</div>
+</div>
+<div class="elementor-element elementor-element-61b5b43 elementor-widget elementor-widget-heading" data-id="61b5b43" data-element_type="widget" data-widget_type="heading.default">
+<div class="elementor-widget-container">
+<h2 class="elementor-heading-title elementor-size-default">Somando tudo daria mais de R$1.000,00…</h2> </div>
+</div>
+<div class="elementor-element elementor-element-7b66c12 elementor-widget elementor-widget-heading" data-id="7b66c12" data-element_type="widget" data-widget_type="heading.default">
+<div class="elementor-widget-container">
+<h2 class="elementor-heading-title elementor-size-default">Mas se você adquirir ainda hoje, tudo isso sai por somente…</h2> </div>
+</div>
+<div class="elementor-element elementor-element-0377783 elementor-widget elementor-widget-heading" data-id="0377783" data-element_type="widget" data-widget_type="heading.default">
+<div class="elementor-widget-container">
+<h2 class="elementor-heading-title elementor-size-default">de R$1.000,00…</h2> </div>
+</div>
+<div class="elementor-element elementor-element-961d1bd elementor-widget elementor-widget-image" data-id="961d1bd" data-element_type="widget" data-widget_type="image.default">
+<div class="elementor-widget-container">
+<img decoding="async" width="115" height="40" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20115%2040'%3E%3C/svg%3E" class="attachment-full size-full" alt data-lazy-src="https://nicoliheinig.com.br/wp-content/uploads/2023/06/60-off.webp" /><noscript><img decoding="async" width="115" height="40" src="https://nicoliheinig.com.br/wp-content/uploads/2023/06/60-off.webp" class="attachment-full size-full" alt="" /></noscript> </div>
+</div>
+<div class="elementor-element elementor-element-207c0b6 elementor-widget elementor-widget-heading" data-id="207c0b6" data-element_type="widget" data-widget_type="heading.default">
+<div class="elementor-widget-container">
+<h2 class="elementor-heading-title elementor-size-default">por 12x R$39,86</h2> </div>
+</div>
+<div class="elementor-element elementor-element-7859959 elementor-widget elementor-widget-heading" data-id="7859959" data-element_type="widget" data-widget_type="heading.default">
+<div class="elementor-widget-container">
+<h2 class="elementor-heading-title elementor-size-default">ou R$397 à vista</h2> </div>
+</div>
+<div class="elementor-element elementor-element-2d7f82e elementor-align-center elementor-widget elementor-widget-button" data-id="2d7f82e" data-element_type="widget" data-widget_type="button.default">
+<div class="elementor-widget-container">
+<div class="elementor-button-wrapper">
+<a href="https://go.hotmart.com/S87694217L?ap=1b09" class="elementor-button-link elementor-button elementor-size-sm elementor-animation-grow" role="button">
+<span class="elementor-button-content-wrapper">
+<span class="elementor-button-text">OBTER ACESSO IMEDIATO</span>
+</span>
+</a>
+</div>
+</div>
+</div>
+<div class="elementor-element elementor-element-5d3a181 elementor-widget elementor-widget-image" data-id="5d3a181" data-element_type="widget" data-widget_type="image.default">
+<div class="elementor-widget-container">
+<img decoding="async" width="336" height="32" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20336%2032'%3E%3C/svg%3E" class="attachment-full size-full" alt data-lazy-srcset="https://nicoliheinig.com.br/wp-content/uploads/2023/06/Group-101450.webp 336w,   https://nicoliheinig.com.br/wp-content/uploads/2023/06/Group-101450-300x29.webp 300w" data-lazy-sizes="(max-width: 336px) 100vw, 336px" data-lazy-src="https://nicoliheinig.com.br/wp-content/uploads/2023/06/Group-101450.webp" /><noscript><img decoding="async" width="336" height="32" src="https://nicoliheinig.com.br/wp-content/uploads/2023/06/Group-101450.webp" class="attachment-full size-full" alt="" srcset="https://nicoliheinig.com.br/wp-content/uploads/2023/06/Group-101450.webp 336w,   https://nicoliheinig.com.br/wp-content/uploads/2023/06/Group-101450-300x29.webp 300w" sizes="(max-width: 336px) 100vw, 336px" /></noscript> </div>
+</div>
+</div>
+</div>
+<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-83fb87e" data-id="83fb87e" data-element_type="column">
+<div class="elementor-widget-wrap">
+</div>
+</div>
+</div>
+</section>
+<section class="elementor-section elementor-top-section elementor-element elementor-element-4307c47 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="4307c47" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+<div class="elementor-container elementor-column-gap-default">
+<div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-ede1b2a elementor-hidden-widescreen elementor-hidden-desktop elementor-hidden-laptop elementor-hidden-tablet" data-id="ede1b2a" data-element_type="column">
+<div class="elementor-widget-wrap elementor-element-populated">
+<div class="elementor-element elementor-element-2d309c5 elementor-widget elementor-widget-image" data-id="2d309c5" data-element_type="widget" data-widget_type="image.default">
+<div class="elementor-widget-container">
+<img decoding="async" width="380" height="634" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20380%20634'%3E%3C/svg%3E" class="attachment-full size-full" alt data-lazy-srcset="https://nicoliheinig.com.br/wp-content/uploads/2023/06/Group-101451.webp 380w,   https://nicoliheinig.com.br/wp-content/uploads/2023/06/Group-101451-180x300.webp 180w" data-lazy-sizes="(max-width: 380px) 100vw, 380px" data-lazy-src="https://nicoliheinig.com.br/wp-content/uploads/2023/06/Group-101451.webp" /><noscript><img decoding="async" width="380" height="634" src="https://nicoliheinig.com.br/wp-content/uploads/2023/06/Group-101451.webp" class="attachment-full size-full" alt="" srcset="https://nicoliheinig.com.br/wp-content/uploads/2023/06/Group-101451.webp 380w,   https://nicoliheinig.com.br/wp-content/uploads/2023/06/Group-101451-180x300.webp 180w" sizes="(max-width: 380px) 100vw, 380px" /></noscript> </div>
+</div>
+</div>
+</div>
+<div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-373f355" data-id="373f355" data-element_type="column">
+<div class="elementor-widget-wrap elementor-element-populated">
+<div class="elementor-element elementor-element-0445ce0 elementor-widget elementor-widget-heading" data-id="0445ce0" data-element_type="widget" data-widget_type="heading.default">
+<div class="elementor-widget-container">
+<h2 class="elementor-heading-title elementor-size-default"><span style="color:#EB1E43">s2</span> Prazer, Nicoli Heinig!</h2> </div>
+</div>
+<div class="elementor-element elementor-element-1951998 elementor-widget elementor-widget-heading" data-id="1951998" data-element_type="widget" data-widget_type="heading.default">
+<div class="elementor-widget-container">
+<h2 class="elementor-heading-title elementor-size-default"><p>Inconformada com a minha realidade financeira, sem dinheiro e sem tempo para absolutamente nada por conta da faculdade e trabalho, percebi que precisava de algo para sair dessa, para mudar a minha vida por completo, e foi aí que encontrei o <b>mercado digital.</b></p>
+<p>Depois de muito tempo estudando, aplicando, errando e aprendendo, <b>descobri o segredo</b>, a engrenagem que faltava, para faturar nesse mercado e ter grandes resultados. Essa foi a virada de chave que me fez sair em pouco tempo de apenas uma renda extra de R$10.000,00 e faturar mais de R$1.000.000,00 com a internet.</p>
+<p>Hoje, milionária aos 23 anos, proprietária de duas empresas de sucesso e mais de <b>10 mil alunos</b>, tenho o propósito de possibilitar que mulheres consigam conquistar sua liberdade e sua independência financeira assim como eu consegui saindo do ZERO!</p></h2> </div>
+</div>
+</div>
+</div>
+<div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-9a1644a" data-id="9a1644a" data-element_type="column">
+<div class="elementor-widget-wrap">
+</div>
+</div>
+</div>
+</section>
+<section class="elementor-section elementor-top-section elementor-element elementor-element-d9d6eb1 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="d9d6eb1" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;gradient&quot;}">
+<div class="elementor-container elementor-column-gap-default">
+<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-10c6d44" data-id="10c6d44" data-element_type="column">
+<div class="elementor-widget-wrap elementor-element-populated">
+<div class="elementor-element elementor-element-dc07c3a elementor-widget elementor-widget-image" data-id="dc07c3a" data-element_type="widget" data-widget_type="image.default">
+<div class="elementor-widget-container">
+<img decoding="async" width="159" height="55" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20159%2055'%3E%3C/svg%3E" class="attachment-full size-full" alt data-lazy-src="https://nicoliheinig.com.br/wp-content/uploads/2023/06/logo-02.webp" /><noscript><img decoding="async" width="159" height="55" src="https://nicoliheinig.com.br/wp-content/uploads/2023/06/logo-02.webp" class="attachment-full size-full" alt="" /></noscript> </div>
+</div>
+<div class="elementor-element elementor-element-acb3dd5 elementor-widget elementor-widget-heading" data-id="acb3dd5" data-element_type="widget" data-widget_type="heading.default">
+<div class="elementor-widget-container">
+<h2 class="elementor-heading-title elementor-size-default">Satisfação garantida e risco zero!</h2> </div>
+</div>
+<div class="elementor-element elementor-element-fce1f0b elementor-widget elementor-widget-heading" data-id="fce1f0b" data-element_type="widget" data-widget_type="heading.default">
+<div class="elementor-widget-container">
+<h2 class="elementor-heading-title elementor-size-default">Se você adquirir esse produto e por algum motivo não se sentir satisfeito, por um prazo de até 7 dias, devolvemos o seu dinheiro.</h2> </div>
+</div>
+</div>
+</div>
+<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-e85ac56" data-id="e85ac56" data-element_type="column">
+<div class="elementor-widget-wrap elementor-element-populated">
+<section class="elementor-section elementor-inner-section elementor-element elementor-element-4acbbe9 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="4acbbe9" data-element_type="section">
+<div class="elementor-container elementor-column-gap-default">
+<div class="elementor-column elementor-col-100 elementor-inner-column elementor-element elementor-element-47706de" data-id="47706de" data-element_type="column">
+<div class="elementor-widget-wrap elementor-element-populated">
+<div class="elementor-element elementor-element-db3e73a elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list" data-id="db3e73a" data-element_type="widget" data-widget_type="icon-list.default">
+<div class="elementor-widget-container">
+<ul class="elementor-icon-list-items">
+<li class="elementor-icon-list-item">
+<span class="elementor-icon-list-icon">
+<i aria-hidden="true" class="hm hm-cart"></i> </span>
+<span class="elementor-icon-list-text">Compra 100% segura</span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="elementor-section elementor-inner-section elementor-element elementor-element-85884d2 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="85884d2" data-element_type="section">
+<div class="elementor-container elementor-column-gap-default">
+<div class="elementor-column elementor-col-100 elementor-inner-column elementor-element elementor-element-cc404c7" data-id="cc404c7" data-element_type="column">
+<div class="elementor-widget-wrap elementor-element-populated">
+<div class="elementor-element elementor-element-77e6607 elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list" data-id="77e6607" data-element_type="widget" data-widget_type="icon-list.default">
+<div class="elementor-widget-container">
+<ul class="elementor-icon-list-items">
+<li class="elementor-icon-list-item">
+<span class="elementor-icon-list-icon">
+<svg xmlns="http://www.w3.org/2000/svg" width="18" height="22" viewBox="0 0 18 22" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M8.82444 0.531835C8.93763 0.489388 9.06237 0.489388 9.17556 0.531835L17.1756 3.53184C17.3707 3.60502 17.5 3.79158 17.5 4V11C17.5 14.2232 15.3591 16.8501 13.3293 18.6263C12.3038 19.5236 11.2807 20.2267 10.515 20.7052C10.1316 20.9449 9.81141 21.129 9.58591 21.2539C9.47312 21.3163 9.38393 21.3639 9.32226 21.3963C9.29142 21.4125 9.26746 21.4249 9.25085 21.4334L9.23153 21.4432L9.22612 21.446L9.2245 21.4468L9.22396 21.447C9.22377 21.4471 9.22361 21.4472 9 21C8.77639 21.4472 8.77623 21.4471 8.77604 21.447L8.7755 21.4468L8.77388 21.446L8.76847 21.4432L8.74915 21.4334C8.73254 21.4249 8.70858 21.4125 8.67774 21.3963C8.61607 21.3639 8.52688 21.3163 8.41409 21.2539C8.18859 21.129 7.86839 20.9449 7.485 20.7052C6.71927 20.2267 5.69619 19.5236 4.67075 18.6263C2.64087 16.8501 0.5 14.2232 0.5 11V4C0.5 3.79158 0.629286 3.60502 0.824438 3.53184L8.82444 0.531835ZM9 21L8.77639 21.4472C8.91716 21.5176 9.08284 21.5176 9.22361 21.4472L9 21ZM9 20.4347C8.96904 20.4179 8.93512 20.3993 8.89841 20.379C8.68641 20.2616 8.38161 20.0864 8.015 19.8573C7.28073 19.3983 6.30381 18.7264 5.32925 17.8737C3.35913 16.1499 1.5 13.7768 1.5 11V4.3465L9 1.534L16.5 4.3465V11C16.5 13.7768 14.6409 16.1499 12.6707 17.8737C11.6962 18.7264 10.7193 19.3983 9.985 19.8573C9.61839 20.0864 9.31359 20.2616 9.10159 20.379C9.06488 20.3993 9.03096 20.4179 9 20.4347Z" fill="black"></path></svg> </span>
+<span class="elementor-icon-list-text">7 dias de garantia</span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="elementor-section elementor-inner-section elementor-element elementor-element-4c292db elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="4c292db" data-element_type="section">
+<div class="elementor-container elementor-column-gap-default">
+<div class="elementor-column elementor-col-100 elementor-inner-column elementor-element elementor-element-fb061e9" data-id="fb061e9" data-element_type="column">
+<div class="elementor-widget-wrap elementor-element-populated">
+<div class="elementor-element elementor-element-bb8cb21 elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list" data-id="bb8cb21" data-element_type="widget" data-widget_type="icon-list.default">
+<div class="elementor-widget-container">
+<ul class="elementor-icon-list-items">
+<li class="elementor-icon-list-item">
+<span class="elementor-icon-list-icon">
+<svg xmlns="http://www.w3.org/2000/svg" width="14" height="24" viewBox="0 0 14 24" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M7 0.5C7.27614 0.5 7.5 0.723858 7.5 1V4.5H12C12.2761 4.5 12.5 4.72386 12.5 5C12.5 5.27614 12.2761 5.5 12 5.5H7.5V11.5H9.5C10.5609 11.5 11.5783 11.9214 12.3284 12.6716C13.0786 13.4217 13.5 14.4391 13.5 15.5C13.5 16.5609 13.0786 17.5783 12.3284 18.3284C11.5783 19.0786 10.5609 19.5 9.5 19.5H7.5V23C7.5 23.2761 7.27614 23.5 7 23.5C6.72386 23.5 6.5 23.2761 6.5 23V19.5H1C0.723858 19.5 0.5 19.2761 0.5 19C0.5 18.7239 0.723858 18.5 1 18.5H6.5V12.5H4.5C3.43913 12.5 2.42172 12.0786 1.67157 11.3284C0.921428 10.5783 0.5 9.56087 0.5 8.5C0.5 7.43913 0.921428 6.42172 1.67157 5.67157C2.42172 4.92143 3.43913 4.5 4.5 4.5H6.5V1C6.5 0.723858 6.72386 0.5 7 0.5ZM6.5 5.5H4.5C3.70435 5.5 2.94129 5.81607 2.37868 6.37868C1.81607 6.94129 1.5 7.70435 1.5 8.5C1.5 9.29565 1.81607 10.0587 2.37868 10.6213C2.94129 11.1839 3.70435 11.5 4.5 11.5H6.5V5.5ZM7.5 12.5V18.5H9.5C10.2956 18.5 11.0587 18.1839 11.6213 17.6213C12.1839 17.0587 12.5 16.2956 12.5 15.5C12.5 14.7044 12.1839 13.9413 11.6213 13.3787C11.0587 12.8161 10.2956 12.5 9.5 12.5H7.5Z" fill="black"></path></svg> </span>
+<span class="elementor-icon-list-text">Reemboso garantido</span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="elementor-section elementor-inner-section elementor-element elementor-element-42529bb elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="42529bb" data-element_type="section">
+<div class="elementor-container elementor-column-gap-default">
+<div class="elementor-column elementor-col-100 elementor-inner-column elementor-element elementor-element-a08ba28" data-id="a08ba28" data-element_type="column">
+<div class="elementor-widget-wrap elementor-element-populated">
+<div class="elementor-element elementor-element-1b94cbf elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list" data-id="1b94cbf" data-element_type="widget" data-widget_type="icon-list.default">
+<div class="elementor-widget-container">
+<ul class="elementor-icon-list-items">
+<li class="elementor-icon-list-item">
+<span class="elementor-icon-list-icon">
+<svg xmlns="http://www.w3.org/2000/svg" width="22" height="21" viewBox="0 0 22 21" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M11 0.5C11.1903 0.5 11.3641 0.608036 11.4484 0.778688L14.4221 6.80323L21.0723 7.77526C21.2606 7.80278 21.417 7.93478 21.4756 8.11578C21.5343 8.29679 21.4852 8.49541 21.3489 8.62818L16.5373 13.3147L17.6728 19.9355C17.705 20.1231 17.6279 20.3127 17.4739 20.4245C17.3199 20.5364 17.1157 20.5511 16.9473 20.4625L11 17.3349L5.05274 20.4625C4.88428 20.5511 4.68014 20.5364 4.52615 20.4245C4.37216 20.3127 4.29504 20.1231 4.32721 19.9355L5.46275 13.3147L0.651148 8.62818C0.514839 8.49541 0.465703 8.29679 0.524392 8.11578C0.58308 7.93478 0.73942 7.80278 0.9277 7.77526L7.57788 6.80323L10.5517 0.778688C10.6359 0.608036 10.8097 0.5 11 0.5ZM11 2.12963L8.35837 7.48131C8.2856 7.62874 8.14501 7.73097 7.98233 7.75474L2.07422 8.6183L6.34888 12.7818C6.46682 12.8967 6.52065 13.0623 6.49282 13.2245L5.48411 19.1058L10.7673 16.3275C10.913 16.2508 11.087 16.2508 11.2327 16.3275L16.5159 19.1058L15.5072 13.2245C15.4794 13.0623 15.5332 12.8967 15.6511 12.7818L19.9258 8.6183L14.0177 7.75474C13.855 7.73097 13.7144 7.62874 13.6417 7.48131L11 2.12963Z" fill="black"></path></svg> </span>
+<span class="elementor-icon-list-text">Qualidade garantida</span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+</div>
+</div>
+</section>
+<section class="elementor-section elementor-top-section elementor-element elementor-element-045fbbf elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="045fbbf" data-element_type="section">
+<div class="elementor-container elementor-column-gap-default">
+<div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-029edc8" data-id="029edc8" data-element_type="column">
+<div class="elementor-widget-wrap elementor-element-populated">
+<div class="elementor-element elementor-element-c4bc222 elementor-hidden-mobile elementor-widget elementor-widget-image" data-id="c4bc222" data-element_type="widget" data-widget_type="image.default">
+<div class="elementor-widget-container">
+<img decoding="async" width="577" height="112" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20577%20112'%3E%3C/svg%3E" class="attachment-large size-large" alt data-lazy-srcset="https://nicoliheinig.com.br/wp-content/uploads/2023/06/Vector-2-1.webp 577w,   https://nicoliheinig.com.br/wp-content/uploads/2023/06/Vector-2-1-300x58.webp 300w" data-lazy-sizes="(max-width: 577px) 100vw, 577px" data-lazy-src="https://nicoliheinig.com.br/wp-content/uploads/2023/06/Vector-2-1.webp" /><noscript><img decoding="async" width="577" height="112" src="https://nicoliheinig.com.br/wp-content/uploads/2023/06/Vector-2-1.webp" class="attachment-large size-large" alt="" srcset="https://nicoliheinig.com.br/wp-content/uploads/2023/06/Vector-2-1.webp 577w,   https://nicoliheinig.com.br/wp-content/uploads/2023/06/Vector-2-1-300x58.webp 300w" sizes="(max-width: 577px) 100vw, 577px" /></noscript> </div>
+</div>
+</div>
+</div>
+<div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-67bb1ed" data-id="67bb1ed" data-element_type="column">
+<div class="elementor-widget-wrap elementor-element-populated">
+<div class="elementor-element elementor-element-5c767ac elementor-position-left elementor-view-default elementor-vertical-align-top elementor-widget elementor-widget-icon-box" data-id="5c767ac" data-element_type="widget" data-widget_type="icon-box.default">
+<div class="elementor-widget-container">
+<style>@media (min-width:768px){.elementor-widget-icon-box.elementor-position-left .elementor-icon-box-wrapper,.elementor-widget-icon-box.elementor-position-right .elementor-icon-box-wrapper{display:-webkit-box;display:-ms-flexbox;display:flex}.elementor-widget-icon-box.elementor-position-left .elementor-icon-box-icon,.elementor-widget-icon-box.elementor-position-right .elementor-icon-box-icon{display:-webkit-inline-box;display:-ms-inline-flexbox;display:inline-flex;-webkit-box-flex:0;-ms-flex:0 0 auto;flex:0 0 auto}.elementor-widget-icon-box.elementor-position-right .elementor-icon-box-wrapper{text-align:right;-webkit-box-orient:horizontal;-webkit-box-direction:reverse;-ms-flex-direction:row-reverse;flex-direction:row-reverse}.elementor-widget-icon-box.elementor-position-left .elementor-icon-box-wrapper{text-align:left;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row}.elementor-widget-icon-box.elementor-position-top .elementor-icon-box-img{margin:auto}.elementor-widget-icon-box.elementor-vertical-align-top .elementor-icon-box-wrapper{-webkit-box-align:start;-ms-flex-align:start;align-items:flex-start}.elementor-widget-icon-box.elementor-vertical-align-middle .elementor-icon-box-wrapper{-webkit-box-align:center;-ms-flex-align:center;align-items:center}.elementor-widget-icon-box.elementor-vertical-align-bottom .elementor-icon-box-wrapper{-webkit-box-align:end;-ms-flex-align:end;align-items:flex-end}}@media (max-width:767px){.elementor-widget-icon-box .elementor-icon-box-icon{margin-left:auto!important;margin-right:auto!important;margin-bottom:15px}}.elementor-widget-icon-box .elementor-icon-box-wrapper{text-align:center}.elementor-widget-icon-box .elementor-icon-box-title a{color:inherit}.elementor-widget-icon-box .elementor-icon-box-content{-webkit-box-flex:1;-ms-flex-positive:1;flex-grow:1}.elementor-widget-icon-box .elementor-icon-box-description{margin:0}</style> <div class="elementor-icon-box-wrapper">
+<div class="elementor-icon-box-icon">
+<span class="elementor-icon elementor-animation-">
+<svg xmlns="http://www.w3.org/2000/svg" width="43" height="47" viewBox="0 0 43 47" fill="none"><path d="M21.1832 0.490869L27.5583 3.30191L6.92721 46.9735L0.552169 44.1122L21.1832 0.490869ZM36.1345 0.490869L42.5096 3.30191L21.8785 46.9735L15.5035 44.1122L36.1345 0.490869Z" fill="url(#paint0_linear_48_263)"></path><defs><linearGradient id="paint0_linear_48_263" x1="12.878" y1="-30.24" x2="74.0474" y2="-0.158833" gradientUnits="userSpaceOnUse"><stop stop-color="#EB1E43"></stop><stop offset="1" stop-color="#EB1E1E"></stop></linearGradient></defs></svg> </span>
+</div>
+<div class="elementor-icon-box-content">
+<h3 class="elementor-icon-box-title">
+<span>
+DÚVIDAS FREQUENTES </span>
+</h3>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-bb692c9" data-id="bb692c9" data-element_type="column">
+<div class="elementor-widget-wrap elementor-element-populated">
+<div class="elementor-element elementor-element-0eee93c elementor-hidden-mobile elementor-widget elementor-widget-image" data-id="0eee93c" data-element_type="widget" data-widget_type="image.default">
+<div class="elementor-widget-container">
+<img decoding="async" width="577" height="112" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20577%20112'%3E%3C/svg%3E" class="attachment-large size-large" alt data-lazy-srcset="https://nicoliheinig.com.br/wp-content/uploads/2023/06/Vector-2-1.webp 577w,   https://nicoliheinig.com.br/wp-content/uploads/2023/06/Vector-2-1-300x58.webp 300w" data-lazy-sizes="(max-width: 577px) 100vw, 577px" data-lazy-src="https://nicoliheinig.com.br/wp-content/uploads/2023/06/Vector-2-1.webp" /><noscript><img decoding="async" width="577" height="112" src="https://nicoliheinig.com.br/wp-content/uploads/2023/06/Vector-2-1.webp" class="attachment-large size-large" alt="" srcset="https://nicoliheinig.com.br/wp-content/uploads/2023/06/Vector-2-1.webp 577w,   https://nicoliheinig.com.br/wp-content/uploads/2023/06/Vector-2-1-300x58.webp 300w" sizes="(max-width: 577px) 100vw, 577px" /></noscript> </div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="elementor-section elementor-top-section elementor-element elementor-element-e0fd154 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="e0fd154" data-element_type="section">
+<div class="elementor-container elementor-column-gap-default">
+<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-0dbbae2" data-id="0dbbae2" data-element_type="column">
+<div class="elementor-widget-wrap elementor-element-populated">
+<div class="elementor-element elementor-element-1fd369e elementor-widget elementor-widget-toggle" data-id="1fd369e" data-element_type="widget" data-widget_type="toggle.default">
+<div class="elementor-widget-container">
+<style>.elementor-toggle{text-align:left}.elementor-toggle .elementor-tab-title{font-weight:700;line-height:1;margin:0;padding:15px;border-bottom:1px solid #d4d4d4;cursor:pointer;outline:none}.elementor-toggle .elementor-tab-title .elementor-toggle-icon{display:inline-block;width:1em}.elementor-toggle .elementor-tab-title .elementor-toggle-icon svg{-webkit-margin-start:-5px;margin-inline-start:-5px;width:1em;height:1em}.elementor-toggle .elementor-tab-title .elementor-toggle-icon.elementor-toggle-icon-right{float:right;text-align:right}.elementor-toggle .elementor-tab-title .elementor-toggle-icon.elementor-toggle-icon-left{float:left;text-align:left}.elementor-toggle .elementor-tab-title .elementor-toggle-icon .elementor-toggle-icon-closed{display:block}.elementor-toggle .elementor-tab-title .elementor-toggle-icon .elementor-toggle-icon-opened{display:none}.elementor-toggle .elementor-tab-title.elementor-active{border-bottom:none}.elementor-toggle .elementor-tab-title.elementor-active .elementor-toggle-icon-closed{display:none}.elementor-toggle .elementor-tab-title.elementor-active .elementor-toggle-icon-opened{display:block}.elementor-toggle .elementor-tab-content{padding:15px;border-bottom:1px solid #d4d4d4;display:none}@media (max-width:767px){.elementor-toggle .elementor-tab-title{padding:12px}.elementor-toggle .elementor-tab-content{padding:12px 10px}}</style> <div class="elementor-toggle" role="tablist">
+<div class="elementor-toggle-item">
+<div id="elementor-tab-title-3331" class="elementor-tab-title" data-tab="1" role="tab" aria-controls="elementor-tab-content-3331" aria-expanded="false">
+<span class="elementor-toggle-icon elementor-toggle-icon-left" aria-hidden="true">
+<span class="elementor-toggle-icon-closed"><svg class="e-font-icon-svg e-fas-caret-right"><use xlink:href="#fas-caret-right" /></svg></span>
+<span class="elementor-toggle-icon-opened"><svg class="elementor-toggle-icon-opened e-font-icon-svg e-fas-caret-up"><use xlink:href="#fas-caret-up" /></svg></span>
+</span>
+<a href class="elementor-toggle-title">Como funciona a mentoria?</a>
+</div>
+<div id="elementor-tab-content-3331" class="elementor-tab-content elementor-clearfix" data-tab="1" role="tabpanel" aria-labelledby="elementor-tab-title-3331"><p>A mentoria ela funciona com aulas gravadas e aulas ao vivo todas as semanas. Após as aulas ao vivo a gravação é disponibilizada dentro da área de membros do treinamento.</p></div>
+</div>
+<div class="elementor-toggle-item">
+<div id="elementor-tab-title-3332" class="elementor-tab-title" data-tab="2" role="tab" aria-controls="elementor-tab-content-3332" aria-expanded="false">
+<span class="elementor-toggle-icon elementor-toggle-icon-left" aria-hidden="true">
+<span class="elementor-toggle-icon-closed"><svg class="e-font-icon-svg e-fas-caret-right"><use xlink:href="#fas-caret-right" /></svg></span>
+<span class="elementor-toggle-icon-opened"><svg class="elementor-toggle-icon-opened e-font-icon-svg e-fas-caret-up"><use xlink:href="#fas-caret-up" /></svg></span>
+</span>
+<a href class="elementor-toggle-title">Em quanto tempo vou ter resultado?</a>
+</div>
+<div id="elementor-tab-content-3332" class="elementor-tab-content elementor-clearfix" data-tab="2" role="tabpanel" aria-labelledby="elementor-tab-title-3332"><p>Depende exclusivamente da sua dedicação, temos alunos que em menos de 7 dias já conseguiram ter resultados.</p></div>
+</div>
+<div class="elementor-toggle-item">
+<div id="elementor-tab-title-3333" class="elementor-tab-title" data-tab="3" role="tab" aria-controls="elementor-tab-content-3333" aria-expanded="false">
+<span class="elementor-toggle-icon elementor-toggle-icon-left" aria-hidden="true">
+<span class="elementor-toggle-icon-closed"><svg class="e-font-icon-svg e-fas-caret-right"><use xlink:href="#fas-caret-right" /></svg></span>
+<span class="elementor-toggle-icon-opened"><svg class="elementor-toggle-icon-opened e-font-icon-svg e-fas-caret-up"><use xlink:href="#fas-caret-up" /></svg></span>
+</span>
+<a href class="elementor-toggle-title">Vou precisar falar com pessoas?</a>
+</div>
+<div id="elementor-tab-content-3333" class="elementor-tab-content elementor-clearfix" data-tab="3" role="tabpanel" aria-labelledby="elementor-tab-title-3333"><p>Não! A menos que você queira. O foco do treinamento é tráfego direto, ou seja você fará vendas somente com anúncios online sem precisar ter que conversar por Whatsapp com o comprador.</p></div>
+</div>
+<div class="elementor-toggle-item">
+<div id="elementor-tab-title-3334" class="elementor-tab-title" data-tab="4" role="tab" aria-controls="elementor-tab-content-3334" aria-expanded="false">
+<span class="elementor-toggle-icon elementor-toggle-icon-left" aria-hidden="true">
+<span class="elementor-toggle-icon-closed"><svg class="e-font-icon-svg e-fas-caret-right"><use xlink:href="#fas-caret-right" /></svg></span>
+<span class="elementor-toggle-icon-opened"><svg class="elementor-toggle-icon-opened e-font-icon-svg e-fas-caret-up"><use xlink:href="#fas-caret-up" /></svg></span>
+</span>
+<a href class="elementor-toggle-title">O que é trafego direto?</a>
+</div>
+<div id="elementor-tab-content-3334" class="elementor-tab-content elementor-clearfix" data-tab="4" role="tabpanel" aria-labelledby="elementor-tab-title-3334"><p>Tráfego direto é uma estratégia que utiliza tráfego pago para direcionar potenciais compradores de um determinado produto para um ambiente onde a oferta do produto e a compra dele pelo cliente ocorre de maneira 100% automática e sem precisar de uma ação humana. É totalmente diferente do X1 ao qual utiliza tráfego pago para enviar pessoas desqualificadas para um canal de comunicação como o Whatsapp que necessita de alguém respondendo e interagindo com o cliente.</p></div>
+</div>
+<div class="elementor-toggle-item">
+<div id="elementor-tab-title-3335" class="elementor-tab-title" data-tab="5" role="tab" aria-controls="elementor-tab-content-3335" aria-expanded="false">
+<span class="elementor-toggle-icon elementor-toggle-icon-left" aria-hidden="true">
+<span class="elementor-toggle-icon-closed"><svg class="e-font-icon-svg e-fas-caret-right"><use xlink:href="#fas-caret-right" /></svg></span>
+<span class="elementor-toggle-icon-opened"><svg class="elementor-toggle-icon-opened e-font-icon-svg e-fas-caret-up"><use xlink:href="#fas-caret-up" /></svg></span>
+</span>
+<a href class="elementor-toggle-title">Que tipo de produto vou vender?</a>
+</div>
+<div id="elementor-tab-content-3335" class="elementor-tab-content elementor-clearfix" data-tab="5" role="tabpanel" aria-labelledby="elementor-tab-title-3335"><p>Você pode vender qualquer coisa dentro da mentoria Next level. Com os conhecimentos em tráfego direto, você pode vender produtos digitais, físicos e até mesmo serviços. E claro, disponibilizamos produtos validados EXCLUSIVOS com estrutura completa para que você possa começar com tudo pronto, apenas tendo que copiar e colar!</p></div>
+</div>
+<div class="elementor-toggle-item">
+<div id="elementor-tab-title-3336" class="elementor-tab-title" data-tab="6" role="tab" aria-controls="elementor-tab-content-3336" aria-expanded="false">
+<span class="elementor-toggle-icon elementor-toggle-icon-left" aria-hidden="true">
+<span class="elementor-toggle-icon-closed"><svg class="e-font-icon-svg e-fas-caret-right"><use xlink:href="#fas-caret-right" /></svg></span>
+<span class="elementor-toggle-icon-opened"><svg class="elementor-toggle-icon-opened e-font-icon-svg e-fas-caret-up"><use xlink:href="#fas-caret-up" /></svg></span>
+</span>
+<a href class="elementor-toggle-title">E se eu não tiver tempo para estudar?</a>
+</div>
+<div id="elementor-tab-content-3336" class="elementor-tab-content elementor-clearfix" data-tab="6" role="tabpanel" aria-labelledby="elementor-tab-title-3336"><p>Com apenas 30 minutos por dia você conseguirá aplicar o método para ter resultados</p></div>
+</div>
+<div class="elementor-toggle-item">
+<div id="elementor-tab-title-3337" class="elementor-tab-title" data-tab="7" role="tab" aria-controls="elementor-tab-content-3337" aria-expanded="false">
+<span class="elementor-toggle-icon elementor-toggle-icon-left" aria-hidden="true">
+<span class="elementor-toggle-icon-closed"><svg class="e-font-icon-svg e-fas-caret-right"><use xlink:href="#fas-caret-right" /></svg></span>
+<span class="elementor-toggle-icon-opened"><svg class="elementor-toggle-icon-opened e-font-icon-svg e-fas-caret-up"><use xlink:href="#fas-caret-up" /></svg></span>
+</span>
+<a href class="elementor-toggle-title">O treinamento tem suporte?</a>
+</div>
+<div id="elementor-tab-content-3337" class="elementor-tab-content elementor-clearfix" data-tab="7" role="tabpanel" aria-labelledby="elementor-tab-title-3337"><p>Sim, temos suporte online 24/7. Você também terá suporte dedicado durante as mentorias comigo e com a minha equipe. também terá um grupo de apoio onde você poderá fazer networking e trocar experiências com os demais alunos do treinamento.</p></div>
+</div>
+<div class="elementor-toggle-item">
+<div id="elementor-tab-title-3338" class="elementor-tab-title" data-tab="8" role="tab" aria-controls="elementor-tab-content-3338" aria-expanded="false">
+<span class="elementor-toggle-icon elementor-toggle-icon-left" aria-hidden="true">
+<span class="elementor-toggle-icon-closed"><svg class="e-font-icon-svg e-fas-caret-right"><use xlink:href="#fas-caret-right" /></svg></span>
+<span class="elementor-toggle-icon-opened"><svg class="elementor-toggle-icon-opened e-font-icon-svg e-fas-caret-up"><use xlink:href="#fas-caret-up" /></svg></span>
+</span>
+<a href class="elementor-toggle-title">Como vou receber a mentoria?</a>
+</div>
+<div id="elementor-tab-content-3338" class="elementor-tab-content elementor-clearfix" data-tab="8" role="tabpanel" aria-labelledby="elementor-tab-title-3338"><p>Pelo e-mail cadastrado na compra</p></div>
+</div>
+<div class="elementor-toggle-item">
+<div id="elementor-tab-title-3339" class="elementor-tab-title" data-tab="9" role="tab" aria-controls="elementor-tab-content-3339" aria-expanded="false">
+<span class="elementor-toggle-icon elementor-toggle-icon-left" aria-hidden="true">
+<span class="elementor-toggle-icon-closed"><svg class="e-font-icon-svg e-fas-caret-right"><use xlink:href="#fas-caret-right" /></svg></span>
+<span class="elementor-toggle-icon-opened"><svg class="elementor-toggle-icon-opened e-font-icon-svg e-fas-caret-up"><use xlink:href="#fas-caret-up" /></svg></span>
+</span>
+<a href class="elementor-toggle-title">Sou totalmente iniciante, o treinamento é para mim?</a>
+</div>
+<div id="elementor-tab-content-3339" class="elementor-tab-content elementor-clearfix" data-tab="9" role="tabpanel" aria-labelledby="elementor-tab-title-3339"><p>Com certeza. A mentoria vai te ensinar tudo do básico até as técnicas mais avançadas, de maneira totalmente didática e prática pra sanar todas suas dúvidas.</p></div>
+</div>
+<div class="elementor-toggle-item">
+<div id="elementor-tab-title-33310" class="elementor-tab-title" data-tab="10" role="tab" aria-controls="elementor-tab-content-33310" aria-expanded="false">
+<span class="elementor-toggle-icon elementor-toggle-icon-left" aria-hidden="true">
+<span class="elementor-toggle-icon-closed"><svg class="e-font-icon-svg e-fas-caret-right"><use xlink:href="#fas-caret-right" /></svg></span>
+<span class="elementor-toggle-icon-opened"><svg class="elementor-toggle-icon-opened e-font-icon-svg e-fas-caret-up"><use xlink:href="#fas-caret-up" /></svg></span>
+</span>
+<a href class="elementor-toggle-title">Já tenho experiência, sou avançado, a mentoria é pra mim?</a>
+</div>
+<div id="elementor-tab-content-33310" class="elementor-tab-content elementor-clearfix" data-tab="10" role="tabpanel" aria-labelledby="elementor-tab-title-33310"><p>Sim! Somente sendo aluno da mentoria você vai poder aprender o que está funcionando atualmente no mercado e ter acesso aos melhores produtos para venda.</p></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="elementor-section elementor-top-section elementor-element elementor-element-6f4541d elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="6f4541d" data-element_type="section">
+<div class="elementor-container elementor-column-gap-default">
+<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-a88d84a" data-id="a88d84a" data-element_type="column">
+<div class="elementor-widget-wrap elementor-element-populated">
+<div class="elementor-element elementor-element-409f67c elementor-widget elementor-widget-heading" data-id="409f67c" data-element_type="widget" data-widget_type="heading.default">
+<div class="elementor-widget-container">
+<h2 class="elementor-heading-title elementor-size-default">Método NH © 2023. Todos os direitos reservados.<br>
+CNPJ: 45.036.071/0001-82</h2> </div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+</div>
+<script type="rocketlazyloadscript" id="rocket-browser-checker-js-after" data-rocket-type="text/javascript">
+"use strict";var _createClass=function(){function defineProperties(target,props){for(var i=0;i<props.length;i++){var descriptor=props[i];descriptor.enumerable=descriptor.enumerable||!1,descriptor.configurable=!0,"value"in descriptor&&(descriptor.writable=!0),Object.defineProperty(target,descriptor.key,descriptor)}}return function(Constructor,protoProps,staticProps){return protoProps&&defineProperties(Constructor.prototype,protoProps),staticProps&&defineProperties(Constructor,staticProps),Constructor}}();function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor))throw new TypeError("Cannot call a class as a function")}var RocketBrowserCompatibilityChecker=function(){function RocketBrowserCompatibilityChecker(options){_classCallCheck(this,RocketBrowserCompatibilityChecker),this.passiveSupported=!1,this._checkPassiveOption(this),this.options=!!this.passiveSupported&&options}return _createClass(RocketBrowserCompatibilityChecker,[{key:"_checkPassiveOption",value:function(self){try{var options={get passive(){return!(self.passiveSupported=!0)}};window.addEventListener("test",null,options),window.removeEventListener("test",null,options)}catch(err){self.passiveSupported=!1}}},{key:"initRequestIdleCallback",value:function(){!1 in window&&(window.requestIdleCallback=function(cb){var start=Date.now();return setTimeout(function(){cb({didTimeout:!1,timeRemaining:function(){return Math.max(0,50-(Date.now()-start))}})},1)}),!1 in window&&(window.cancelIdleCallback=function(id){return clearTimeout(id)})}},{key:"isDataSaverModeOn",value:function(){return"connection"in navigator&&!0===navigator.connection.saveData}},{key:"supportsLinkPrefetch",value:function(){var elem=document.createElement("link");return elem.relList&&elem.relList.supports&&elem.relList.supports("prefetch")&&window.IntersectionObserver&&"isIntersecting"in IntersectionObserverEntry.prototype}},{key:"isSlowConnection",value:function(){return"connection"in navigator&&"effectiveType"in navigator.connection&&("2g"===navigator.connection.effectiveType||"slow-2g"===navigator.connection.effectiveType)}}]),RocketBrowserCompatibilityChecker}();
+</script>
+<script type="text/javascript" id="rocket-preload-links-js-extra">
+/* <![CDATA[ */
+var RocketPreloadLinksConfig = {"excludeUris":"\/(.+\/)?feed\/?.+\/?|\/(?:.+\/)?embed\/|\/(index\\.php\/)?wp\\-json(\/.*|$)|\/wp-admin\/|\/logout\/|\/wp-login.php","usesTrailingSlash":"1","imageExt":"jpg|jpeg|gif|png|tiff|bmp|webp|avif","fileExt":"jpg|jpeg|gif|png|tiff|bmp|webp|avif|php|pdf|html|htm","siteUrl":"https:\/\/nicoliheinig.com.br","onHoverDelay":"100","rateThrottle":"3"};
+/* ]]> */
+</script>
+<script type="rocketlazyloadscript" id="rocket-preload-links-js-after" data-rocket-type="text/javascript">
+(function() {
+"use strict";var r="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e},e=function(){function i(e,t){for(var n=0;n<t.length;n++){var i=t[n];i.enumerable=i.enumerable||!1,i.configurable=!0,"value"in i&&(i.writable=!0),Object.defineProperty(e,i.key,i)}}return function(e,t,n){return t&&i(e.prototype,t),n&&i(e,n),e}}();function i(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}var t=function(){function n(e,t){i(this,n),this.browser=e,this.config=t,this.options=this.browser.options,this.prefetched=new Set,this.eventTime=null,this.threshold=1111,this.numOnHover=0}return e(n,[{key:"init",value:function(){!this.browser.supportsLinkPrefetch()||this.browser.isDataSaverModeOn()||this.browser.isSlowConnection()||(this.regex={excludeUris:RegExp(this.config.excludeUris,"i"),images:RegExp(".("+this.config.imageExt+")$","i"),fileExt:RegExp(".("+this.config.fileExt+")$","i")},this._initListeners(this))}},{key:"_initListeners",value:function(e){-1<this.config.onHoverDelay&&document.addEventListener("mouseover",e.listener.bind(e),e.listenerOptions),document.addEventListener("mousedown",e.listener.bind(e),e.listenerOptions),document.addEventListener("touchstart",e.listener.bind(e),e.listenerOptions)}},{key:"listener",value:function(e){var t=e.target.closest("a"),n=this._prepareUrl(t);if(null!==n)switch(e.type){case"mousedown":case"touchstart":this._addPrefetchLink(n);break;case"mouseover":this._earlyPrefetch(t,n,"mouseout")}}},{key:"_earlyPrefetch",value:function(t,e,n){var i=this,r=setTimeout(function(){if(r=null,0===i.numOnHover)setTimeout(function(){return i.numOnHover=0},1e3);else if(i.numOnHover>i.config.rateThrottle)return;i.numOnHover++,i._addPrefetchLink(e)},this.config.onHoverDelay);t.addEventListener(n,function e(){t.removeEventListener(n,e,{passive:!0}),null!==r&&(clearTimeout(r),r=null)},{passive:!0})}},{key:"_addPrefetchLink",value:function(i){return this.prefetched.add(i.href),new Promise(function(e,t){var n=document.createElement("link");n.rel="prefetch",n.href=i.href,n.onload=e,n.onerror=t,document.head.appendChild(n)}).catch(function(){})}},{key:"_prepareUrl",value:function(e){if(null===e||"object"!==(void 0===e?"undefined":r(e))||!1 in e||-1===["http:","https:"].indexOf(e.protocol))return null;var t=e.href.substring(0,this.config.siteUrl.length),n=this._getPathname(e.href,t),i={original:e.href,protocol:e.protocol,origin:t,pathname:n,href:t+n};return this._isLinkOk(i)?i:null}},{key:"_getPathname",value:function(e,t){var n=t?e.substring(this.config.siteUrl.length):e;return n.startsWith("/")||(n="/"+n),this._shouldAddTrailingSlash(n)?n+"/":n}},{key:"_shouldAddTrailingSlash",value:function(e){return this.config.usesTrailingSlash&&!e.endsWith("/")&&!this.regex.fileExt.test(e)}},{key:"_isLinkOk",value:function(e){return null!==e&&"object"===(void 0===e?"undefined":r(e))&&(!this.prefetched.has(e.href)&&e.origin===this.config.siteUrl&&-1===e.href.indexOf("?")&&-1===e.href.indexOf("#")&&!this.regex.excludeUris.test(e.href)&&!this.regex.images.test(e.href))}}],[{key:"run",value:function(){"undefined"!=typeof RocketPreloadLinksConfig&&new n(new RocketBrowserCompatibilityChecker({capture:!0,passive:!0}),RocketPreloadLinksConfig).init()}}]),n}();t.run();
+}());
+</script>
+<script type="text/javascript" id="happy-elementor-addons-js-extra">
+/* <![CDATA[ */
+var HappyLocalize = {"ajax_url":"https:\/\/nicoliheinig.com.br\/wp-admin\/admin-ajax.php","nonce":"1676aaf459","pdf_js_lib":"https:\/\/nicoliheinig.com.br\/wp-content\/plugins\/happy-elementor-addons\/assets\/vendor\/pdfjs\/lib"};
+/* ]]> */
+</script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" src="https://nicoliheinig.com.br/wp-content/plugins/happy-elementor-addons/assets/js/happy-addons.min.js?ver=3.7.0" id="happy-elementor-addons-js" defer></script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" src="https://nicoliheinig.com.br/wp-content/plugins/elementor/assets/lib/e-gallery/js/e-gallery.min.js?ver=1.2.0" id="elementor-gallery-js" defer></script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" src="https://nicoliheinig.com.br/wp-content/plugins/elementor-pro/assets/js/webpack-pro.runtime.min.js?ver=3.6.3" id="elementor-pro-webpack-runtime-js" defer></script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" src="https://nicoliheinig.com.br/wp-content/plugins/elementor/assets/js/webpack.runtime.min.js?ver=3.5.6" id="elementor-webpack-runtime-js" defer></script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" src="https://nicoliheinig.com.br/wp-content/plugins/elementor/assets/js/frontend-modules.min.js?ver=3.5.6" id="elementor-frontend-modules-js" defer></script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" src="https://nicoliheinig.com.br/wp-includes/js/dist/vendor/wp-polyfill-inert.min.js?ver=3.1.2" id="wp-polyfill-inert-js" defer></script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" src="https://nicoliheinig.com.br/wp-includes/js/dist/vendor/regenerator-runtime.min.js?ver=0.13.11" id="regenerator-runtime-js" defer></script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" src="https://nicoliheinig.com.br/wp-includes/js/dist/vendor/wp-polyfill.min.js?ver=3.15.0" id="wp-polyfill-js"></script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" src="https://nicoliheinig.com.br/wp-includes/js/dist/hooks.min.js?ver=c6aec9a8d4e5a5d543a1" id="wp-hooks-js"></script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" src="https://nicoliheinig.com.br/wp-includes/js/dist/i18n.min.js?ver=7701b0c3857f914212ef" id="wp-i18n-js"></script>
+<script type="rocketlazyloadscript" id="wp-i18n-js-after" data-rocket-type="text/javascript">
+wp.i18n.setLocaleData( { 'text direction\u0004ltr': [ 'ltr' ] } );
+</script>
+<script type="rocketlazyloadscript" id="elementor-pro-frontend-js-before" data-rocket-type="text/javascript">
+var ElementorProFrontendConfig = {"ajaxurl":"https:\/\/nicoliheinig.com.br\/wp-admin\/admin-ajax.php","nonce":"a35ca4cdb9","urls":{"assets":"https:\/\/nicoliheinig.com.br\/wp-content\/plugins\/elementor-pro\/assets\/","rest":"https:\/\/nicoliheinig.com.br\/wp-json\/"},"shareButtonsNetworks":{"facebook":{"title":"Facebook","has_counter":true},"twitter":{"title":"Twitter"},"linkedin":{"title":"LinkedIn","has_counter":true},"pinterest":{"title":"Pinterest","has_counter":true},"reddit":{"title":"Reddit","has_counter":true},"vk":{"title":"VK","has_counter":true},"odnoklassniki":{"title":"OK","has_counter":true},"tumblr":{"title":"Tumblr"},"digg":{"title":"Digg"},"skype":{"title":"Skype"},"stumbleupon":{"title":"StumbleUpon","has_counter":true},"mix":{"title":"Mix"},"telegram":{"title":"Telegram"},"pocket":{"title":"Pocket","has_counter":true},"xing":{"title":"XING","has_counter":true},"whatsapp":{"title":"WhatsApp"},"email":{"title":"Email"},"print":{"title":"Print"}},"facebook_sdk":{"lang":"pt_BR","app_id":""},"lottie":{"defaultAnimationUrl":"https:\/\/nicoliheinig.com.br\/wp-content\/plugins\/elementor-pro\/modules\/lottie\/assets\/animations\/default.json"}};
+</script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" src="https://nicoliheinig.com.br/wp-content/plugins/elementor-pro/assets/js/frontend.min.js?ver=3.6.3" id="elementor-pro-frontend-js" defer></script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" src="https://nicoliheinig.com.br/wp-content/plugins/elementor/assets/lib/waypoints/waypoints.min.js?ver=4.0.2" id="elementor-waypoints-js" defer></script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" src="https://nicoliheinig.com.br/wp-includes/js/jquery/ui/core.min.js?ver=1.13.2" id="jquery-ui-core-js" defer></script>
+<script type="rocketlazyloadscript" id="elementor-frontend-js-before" data-rocket-type="text/javascript">
+var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false,"isScriptDebug":false},"i18n":{"shareOnFacebook":"Compartilhar no Facebook","shareOnTwitter":"Compartilhar no Twitter","pinIt":"Fixar","download":"Baixar","downloadImage":"Baixar imagem","fullscreen":"Tela cheia","zoom":"Zoom","share":"Compartilhar","playVideo":"Reproduzir v\u00eddeo","previous":"Anterior","next":"Pr\u00f3ximo","close":"Fechar"},"is_rtl":false,"breakpoints":{"xs":0,"sm":480,"md":768,"lg":1025,"xl":1440,"xxl":1600},"responsive":{"breakpoints":{"mobile":{"label":"Celular","value":767,"default_value":767,"direction":"max","is_enabled":true},"mobile_extra":{"label":"Celular extra","value":880,"default_value":880,"direction":"max","is_enabled":false},"tablet":{"label":"Tablet","value":1024,"default_value":1024,"direction":"max","is_enabled":true},"tablet_extra":{"label":"Tablet extra","value":1200,"default_value":1200,"direction":"max","is_enabled":false},"laptop":{"label":"Laptop","value":1366,"default_value":1366,"direction":"max","is_enabled":true},"widescreen":{"label":"Widescreen","value":2400,"default_value":2400,"direction":"min","is_enabled":true}}},"version":"3.5.6","is_static":false,"experimentalFeatures":{"e_dom_optimization":true,"e_optimized_assets_loading":true,"e_optimized_css_loading":true,"e_font_icon_svg":true,"a11y_improvements":true,"e_import_export":true,"additional_custom_breakpoints":true,"e_hidden_wordpress_widgets":true,"theme_builder_v2":true,"landing-pages":true,"elements-color-picker":true,"favorite-widgets":true,"admin-top-bar":true,"page-transitions":true,"form-submissions":true,"e_scroll_snap":true},"urls":{"assets":"https:\/\/nicoliheinig.com.br\/wp-content\/plugins\/elementor\/assets\/"},"settings":{"page":[],"editorPreferences":[]},"kit":{"body_background_background":"classic","active_breakpoints":["viewport_mobile","viewport_tablet","viewport_laptop","viewport_widescreen"],"global_image_lightbox":"yes","lightbox_enable_counter":"yes","lightbox_enable_fullscreen":"yes","lightbox_enable_zoom":"yes","lightbox_enable_share":"yes","lightbox_title_src":"title","lightbox_description_src":"description"},"post":{"id":6149,"title":"Mentoria%20Next%20Level%20Resultados%20%E2%80%93%20Nicoli%20Heinig","excerpt":"","featuredImage":false}};
+</script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" src="https://nicoliheinig.com.br/wp-content/plugins/elementor/assets/js/frontend.min.js?ver=3.5.6" id="elementor-frontend-js" defer></script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript" src="https://nicoliheinig.com.br/wp-content/plugins/elementor-pro/assets/js/elements-handlers.min.js?ver=3.6.3" id="pro-elements-handlers-js" defer></script>
+<script>window.lazyLoadOptions={elements_selector:"img[data-lazy-src],.rocket-lazyload,iframe[data-lazy-src]",data_src:"lazy-src",data_srcset:"lazy-srcset",data_sizes:"lazy-sizes",class_loading:"lazyloading",class_loaded:"lazyloaded",threshold:300,callback_loaded:function(element){if(element.tagName==="IFRAME"&&element.dataset.rocketLazyload=="fitvidscompatible"){if(element.classList.contains("lazyloaded")){if(typeof window.jQuery!="undefined"){if(jQuery.fn.fitVids){jQuery(element).parent().fitVids()}}}}}};window.addEventListener('LazyLoad::Initialized',function(e){var lazyLoadInstance=e.detail.instance;if(window.MutationObserver){var observer=new MutationObserver(function(mutations){var image_count=0;var iframe_count=0;var rocketlazy_count=0;mutations.forEach(function(mutation){for(i=0;i<mutation.addedNodes.length;i++){if(typeof mutation.addedNodes[i].getElementsByTagName!=='function'){continue}
+if(typeof mutation.addedNodes[i].getElementsByClassName!=='function'){continue}
+images=mutation.addedNodes[i].getElementsByTagName('img');is_image=mutation.addedNodes[i].tagName=="IMG";iframes=mutation.addedNodes[i].getElementsByTagName('iframe');is_iframe=mutation.addedNodes[i].tagName=="IFRAME";rocket_lazy=mutation.addedNodes[i].getElementsByClassName('rocket-lazyload');image_count+=images.length;iframe_count+=iframes.length;rocketlazy_count+=rocket_lazy.length;if(is_image){image_count+=1}
+if(is_iframe){iframe_count+=1}}});if(image_count>0||iframe_count>0||rocketlazy_count>0){lazyLoadInstance.update()}});var b=document.getElementsByTagName("body")[0];var config={childList:!0,subtree:!0};observer.observe(b,config)}},!1)</script><script data-no-minify="1" async src="https://nicoliheinig.com.br/wp-content/plugins/wp-rocket/assets/js/lazyload/16.1/lazyload.min.js"></script><script>function lazyLoadThumb(e){var t='<img loading="lazy" data-lazy-src="https://i.ytimg.com/vi/ID/hqdefault.jpg" alt="" width="480" height="360"><noscript><img src="https://i.ytimg.com/vi/ID/hqdefault.jpg" alt="" width="480" height="360"></noscript>',a='<div class="play"></div>';return t.replace("ID",e)+a}function lazyLoadYoutubeIframe(){var e=document.createElement("iframe"),t="ID?autoplay=1";t+=0===this.dataset.query.length?'':'&'+this.dataset.query;e.setAttribute("src",t.replace("ID",this.dataset.src)),e.setAttribute("frameborder","0"),e.setAttribute("allowfullscreen","1"),e.setAttribute("allow", "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"),this.parentNode.replaceChild(e,this)}document.addEventListener("DOMContentLoaded",function(){var e,t,a=document.getElementsByClassName("rll-youtube-player");for(t=0;t<a.length;t++)e=document.createElement("div"),e.setAttribute("data-id",a[t].dataset.id),e.setAttribute("data-query", a[t].dataset.query),e.setAttribute("data-src", a[t].dataset.src),e.innerHTML=lazyLoadThumb(a[t].dataset.id),e.onclick=lazyLoadYoutubeIframe,a[t].appendChild(e)});</script> <script>class RocketElementorAnimation{constructor(){this.deviceMode=document.createElement("span"),this.deviceMode.id="elementor-device-mode",this.deviceMode.setAttribute("class","elementor-screen-only"),document.body.appendChild(this.deviceMode)}_detectAnimations(){let t=getComputedStyle(this.deviceMode,":after").content.replace(/"/g,"");this.animationSettingKeys=this._listAnimationSettingsKeys(t),document.querySelectorAll(".elementor-invisible[data-settings]").forEach(t=>{const e=t.getBoundingClientRect();if(e.bottom>=0&&e.top<=window.innerHeight)try{this._animateElement(t)}catch(t){}})}_animateElement(t){const e=JSON.parse(t.dataset.settings),i=e._animation_delay||e.animation_delay||0,n=e[this.animationSettingKeys.find(t=>e[t])];if("none"===n)return void t.classList.remove("elementor-invisible");t.classList.remove(n),this.currentAnimation&&t.classList.remove(this.currentAnimation),this.currentAnimation=n;let s=setTimeout(()=>{t.classList.remove("elementor-invisible"),t.classList.add("animated",n),this._removeAnimationSettings(t,e)},i);window.addEventListener("rocket-startLoading",function(){clearTimeout(s)})}_listAnimationSettingsKeys(t="mobile"){const e=[""];switch(t){case"mobile":e.unshift("_mobile");case"tablet":e.unshift("_tablet");case"desktop":e.unshift("_desktop")}const i=[];return["animation","_animation"].forEach(t=>{e.forEach(e=>{i.push(t+e)})}),i}_removeAnimationSettings(t,e){this._listAnimationSettingsKeys().forEach(t=>delete e[t]),t.dataset.settings=JSON.stringify(e)}static run(){const t=new RocketElementorAnimation;requestAnimationFrame(t._detectAnimations.bind(t))}}document.addEventListener("DOMContentLoaded",RocketElementorAnimation.run);</script></body>
 </html>

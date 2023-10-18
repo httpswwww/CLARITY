@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Nicoli Heinig</title>
+	<atom:link href="https://nicoliheinig.com.br/feed/" rel="self" type="application/rss+xml" />
+	<link>https://nicoliheinig.com.br</link>
+	<description></description>
+	<lastBuildDate>Thu, 01 Jul 2021 14:03:14 +0000</lastBuildDate>
+	<language>pt-BR</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.3.2</generator>
+
+<image>
+	<url>https://nicoliheinig.com.br/wp-content/uploads/2021/07/cropped-logo-nicoli-nh-32x32.png</url>
+	<title>Nicoli Heinig</title>
+	<link>https://nicoliheinig.com.br</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>Olá, mundo!</title>
+		<link>https://nicoliheinig.com.br/2021/07/01/ola-mundo/</link>
+					<comments>https://nicoliheinig.com.br/2021/07/01/ola-mundo/#respond</comments>
+		
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<pubDate>Thu, 01 Jul 2021 14:03:14 +0000</pubDate>
+				<category><![CDATA[Sem categoria]]></category>
+		<guid isPermaLink="false">http://nicoliheinig-com-br.umbler.net/?p=1</guid>
+
+					<description><![CDATA[Boas-vindas ao WordPress. Esse é o seu primeiro post. Edite-o ou exclua-o, e então comece a escrever!]]></description>
+										<content:encoded><![CDATA[
+<p>Boas-vindas ao WordPress. Esse é o seu primeiro post. Edite-o ou exclua-o, e então comece a escrever!</p>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://nicoliheinig.com.br/2021/07/01/ola-mundo/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>
